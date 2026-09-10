@@ -7,4 +7,4 @@
 const introSlide = new Swiper('.main-slide',{
     direction:'vertical',
     mousewheel:true,
-})
+});
