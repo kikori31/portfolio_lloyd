@@ -1,0 +1,37 @@
+/* index.css(로이드) */
+header{
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-between; align-items:center;
+    max-width:var(--width-desk); 
+    height:83px; 
+    margin:0 auto; /* background-color:lightgray; */
+}
+
+header .logo{}
+header .logo a {}
+header .logo a img {}
+header .gnb {font-weight: 500;}
+header .gnb a {margin-right:60px;}
+header .gnb a:nth-child(7){
+    color:var(--color-primary);
+}
+/* 메뉴 오른쪽 섹션(3개 아이콘) */
+header .snb {}
+header .snb a {margin-right:24px;}
+header .snb a img {}
+header .snb .search_btn {}
+header .snb .search_btn img {}
+header .snb .cart_btn {}
+header .snb .cart_btn img {}
+header .snb .login_btn_ img {}
+
+/* 메인 슬라이드 */
+.main-slide {height:100vh;}
+.main-slide > .swiper-wrapper {}
+.main-slide > .swiper-wrapper > .swiper-slide {
+    height:100vh; 
+}
+.main-slide .swiper-wrapper .intro1 {
+    background-image: url(../images/mainbnr.jpg);
+    background-size:cover; background-position: center;
+}

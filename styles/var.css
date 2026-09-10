@@ -1,0 +1,12 @@
+/* var.css(로이드) */
+:root{
+    /* 색상 */
+    --color-primary:#387841; /* 런칭캘린더,커플웨딩랩다이아 메뉴에 들어감 */
+    --color-dark:#161616;
+    --color-light:#fff;
+    --color-head-line:#EFEFEF; /* 헤더 외곽선 라인 색상 */
+
+    /* 크기 */
+    --width-desk-full:1920px;
+    --width-desk:1550px;
+}
