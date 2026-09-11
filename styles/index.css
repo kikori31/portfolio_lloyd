@@ -1,11 +1,12 @@
 /* index.css(로이드) */
-header{background: #fff; position: sticky;  top:0; width:100%; z-index:999;}
-header .menu_wrap{
+body{height:2000px;}
+header{background: #fff; position: fixed;  top:0; width:100%; border-bottom:1px solid var(--color-head-line);}
+header .menu_wrap{ /* 로고~아이콘까지 */
     max-width:var(--width-desk); 
     display:flex; flex-flow:row nowrap;
     justify-content: space-between; align-items:center;
     margin:0 auto;  height:83px;
-    border-bottom:1px solid var(--color-head-line);
+    
 }
 header .menu_wrap .logo{}
 header .menu_wrap .logo a {}
@@ -16,6 +17,7 @@ header .menu_wrap nav a {
     font-weight: 500;}
 header .menu_wrap nav a:nth-child(7){
     color:var(--color-primary);
+    font-weight:600;
 }
 header .menu_wrap .snb {}/* 메뉴 오른쪽 섹션(3개 아이콘) */
 header .menu_wrap .snb a {margin-right:24px;}
@@ -25,9 +27,27 @@ header .menu_wrap .snb .search_btn img {}
 header .menu_wrap .snb .cart_btn {}
 header .menu_wrap .snb .cart_btn img {}
 header .menu_wrap .snb .login_btn_ img {}
-header .menu_wrap .menu_open_wrap {
-    width:100%; height:433px;
+
+
+/* 서브 메뉴 */
+.menu_open_wrap { /* item 마우스오버 했을때 나오는 서브 메뉴 */
+    margin-top:83px; height:370px; background:#fff;
+    display: flex; position: fixed;  top:0; width:100%; 
+    border-top:1px solid var(--color-head-line);
 }
+.menu_open_wrap .menu_open_inner {
+    width:var(--width-desk); margin:0 auto; padding-top:40px;
+    display:flex;  justify-content: space-between;
+    
+} 
+.menu_open_wrap .menu_open_inner .menu_list {
+    display:flex; gap:110px;
+}
+.menu_open_wrap .menu_open_inner .menu_list .middle_menu {}
+.menu_open_wrap .menu_open_inner .menu_list .middle_menu > a {font-weight:600;}
+.menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu { margin-top:28px;} 
+.menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li { margin-top:16px; font-size:0.875rem;} 
+.menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li > a {} 
 
 
 /* 메인 슬라이드 */
