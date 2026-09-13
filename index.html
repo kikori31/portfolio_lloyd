@@ -13,6 +13,12 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>로이드 | 변하지 않는 가치 골드 주얼리</title>
+    <!--swiper 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--swiper 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/var.css">
@@ -27,7 +33,7 @@
             <a href="index.html"><img src="./images/logo.svg" alt="LLOYD"></a>
             </h1><!-- e:logo -->
             <nav> <!-- 중간 텍스트 메인 메뉴  -->
-                <a href="#">BEST</a> <!-- bmw메뉴 참고 (마우스오버)  -->
+                <a href="#">BEST</a>  <!-- bmw메뉴 참고 (마우스오버)  -->
                 <a href="#">NEW</a>
                 <a href="#">ITEM</a>
                 <a href="#">WEDDING</a>
@@ -101,24 +107,144 @@
             </ul> <!-- e:menu_list -->
             <!-- 서브메뉴 오른쪽 배너 섹션 -->
             <div class="menu_banner">
-                <a href="#"><img src="./images/submenu_ad.jpg" alt="추천 상품"></a>
+                <a href="#"><img src="./images/submenu_ad1.jpg" alt="추천 상품"></a>
             </div> <!-- e:menu_banner  -->
         </div> <!-- e:menu_open_inner -->
     </div> <!-- e:menu_open_wrap -->
+    <div class="popup_bg"></div> <!-- ITEM 메뉴 눌렀을 때 나오는 배경 -->
+
     <!-- <div class="search_open_wrap">
         <div class="search_open_inner">
             <input type="text" id="" placeholder="검색어를 입력해주세요.">
         </div>
     </div> -->
-    <div class="swiper main-slide"> 
-        <div class="swiper-wrapper">
-            <div class="swiper-slide intro1"> 
-                <h2>New Golden Leaf</h2>
-                <h3>골든리프 런칭 | 반지 구매 시 파우치 키링 증정</h3>
+
+    <main>
+        <!-- 1행 메인배너 -->
+        <div class="swiper hero-banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero1">
+                    <p class="photo"><img src="./images/mainbnr.jpg" alt="메인 배너"></p>
+                    <h2>New Golden Leaf</h2>
+                    <h3>골든리프 런칭 | 반지 구매 시 파우치 키링 증정</h3>
+                </div>
+                <div class="swiper-slide hero2">
+                    <p class="photo"><img src="./images/mainbnr.jpg" alt="메인 배너"></p>
+                    <h2>New Golden Leaf</h2>
+                    <h3>골든리프 런칭 | 반지 구매 시 파우치 키링 증정</h3>
+                </div> <!-- 1행 메인배너 종료 -->
+                
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-    </div>
-        
-        
+        <!-- 2행 gold~시계 카테고리 메뉴 -->
+        <div class="category_menu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <p class="thumb"><img src="./images/category_gold.jpg" alt="gold"></p>
+                        <p class="desc">GOLD</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="thumb"><img src="./images/category_lab.jpg" alt="랩 다이아몬드"></p>
+                        <p class="desc">랩 다이아몬드</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="thumb"><img src="./images/category_couple.jpg" alt="커플/웨딩"></p>
+                        <p class="desc">커플/웨딩</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="thumb"><img src="./images/category_24k.jpg" alt="24K순금"></p>
+                        <p class="desc">24K 순금</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="thumb"><img src="./images/category_silver.jpg" alt="실버"></p>
+                        <p class="desc">실버</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="thumb"><img src="./images/category_watch.jpg" alt="시계"></p>
+                        <p class="desc">시계</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!--e: 2행 gold~시계 카테고리 메뉴 종료 -->
+        <!-- 4행  NEW 섹션 -->
+        <div class="new_sec">
+            <h2>NEW ITEM</h2>
+            <ul class="contents">
+                <li>
+                    <a href="#">
+                        <p class="new_thumb"><img src="./images/new_thumb01.jpg" alt=""></p>
+                        <!-- <button type="button" id="like_btn"></button> -->
+                        <div class="product_desc">
+                            <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
+                            <h3 class="name">0.095ct 6프롱 다이아몬드 14K 목걸이</h3>
+                            <p class="price">459,000원</p>
+                            <p class="review">리뷰 21</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="new_thumb"><img src="./images/new_thumb02.jpg" alt=""></p>
+                        <!-- <button type="button" id="like_btn"></button> -->
+                        <div class="product_desc">
+                            <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
+                            <h3 class="name">에센셜 포인트 십자가 10K 펜던트</h3>
+                            <p class="price">199,000원</p>
+                            <p class="review">리뷰 12</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="new_thumb"><img src="./images/new_thumb03.jpg" alt=""></p>
+                        <!-- <button type="button" id="like_btn"></button> -->
+                        <div class="product_desc">
+                            <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
+                            <h3 class="name">[실버 925] 빅 오벌컷 스톤 목걸이</h3>
+                            <p class="price">99,000원</p>
+                            <p class="review">리뷰 6</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="new_thumb"><img src="./images/new_thumb04.jpg" alt=""></p>
+                        <!-- <button type="button" id="like_btn"></button> -->
+                        <div class="product_desc">
+                            <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
+                            <h3 class="name">포인트 세팅 14K 볼반지</h3>
+                            <p class="price">329,000원</p>
+                            <p class="review">리뷰 14</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="new_thumb"><img src="./images/new_thumb05.jpg" alt=""></p>
+                        <!-- <button type="button" id="like_btn"></button> -->
+                        <div class="product_desc">
+                            <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
+                            <h3 class="name">[조카 선물 추천] 24K 순금 반돈 청룡 돌반지</h3>
+                            <p class="price">498,000원</p>
+                            <p class="review">리뷰 26</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
 </body>
 </html>

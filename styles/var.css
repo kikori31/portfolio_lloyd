@@ -9,4 +9,9 @@
     /* 크기 */
     --width-desk-full:1920px;
     --width-desk:1550px;
+
+    /* 폰트 크기 */
+    --font-size-sectitle :2.188rem; /* 섹션 타이틀(best,new 등) 35px */
+    --font-size-prodname :0.938rem; /* 상품명 15px */
+    --font-size-review:0.844rem;
 }
