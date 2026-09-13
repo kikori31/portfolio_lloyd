@@ -5,6 +5,8 @@
     --color-dark:#161616;
     --color-light:#fff;
     --color-head-line:#EFEFEF; /* 헤더 외곽선 라인 색상 */
+    --color-category-line:#D6D6D6; /* 베스트 카테고리 외곽선 */
+    --color-category-text:#838383; /* 베스트 카테고리 글자  */
 
     /* 크기 */
     --width-desk-full:1920px;
@@ -12,6 +14,11 @@
 
     /* 폰트 크기 */
     --font-size-sectitle :2.188rem; /* 섹션 타이틀(best,new 등) 35px */
+    --font-size-subtitle :1.125;
     --font-size-prodname :0.938rem; /* 상품명 15px */
-    --font-size-review:0.844rem;
+    --font-size-catetext :0.938rem; /* 카테고리 글자 15px */
+    --font-size-review:0.844rem; /* 리뷰 13.5px */
+
+    /* 버튼 크기 */
+    --spcing-best-category : 17px 6px;
 }

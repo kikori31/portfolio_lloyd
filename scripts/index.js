@@ -4,7 +4,8 @@
 
 const itemMenu = document.querySelector('nav > a:nth-child(3)');
 const menuOpen = document.querySelector('.menu_open_wrap');
-const popup_bg = document.querySelector('.popup_bg'); 
+const popup_bg = document.querySelector('.popup_bg');
+const bestCategory = document.querySelectorAll('.best_category_group > button')
 
 menuOpen.style.display ='none';
 popup_bg.style.display ='none';
@@ -30,4 +31,16 @@ const slide = new Swiper('.hero-banner',{
         delay:6000,
         disableOnInteraction:false,
     },
+    
 })
+
+// 베스트 카테고리 메뉴 활성화
+bestCategory.forEach((o)=>{
+    o.addEventListener('click',()=>{
+        bestCategory.forEach((o2)=>{
+            o2.classList.remove('active');
+        });
+        
+        o.classList.add('active');
+    });
+});

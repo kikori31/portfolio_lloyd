@@ -19,6 +19,7 @@
     <!--swiper 필수 JS cdn 연결-->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 디자인 -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/var.css">
@@ -124,6 +125,15 @@
         <div class="swiper hero-banner">
             <div class="swiper-wrapper">
                 <div class="swiper-slide hero1">
+                    <h2>New Golden Leaf</h2>
+                    <h3>골든리프 런칭 | 반지 구매 시 파우치 키링 증정</h3>
+                </div>
+                <div class="swiper-slide hero2">
+                    <h2>New Golden Leaf</h2>
+                    <h3>골든리프 런칭 | 반지 구매 시 파우치 키링 증정</h3>
+                </div>
+                <div class="swiper-scrollbar scroll"></div>
+                <!-- <div class="swiper-slide hero1">
                     <p class="photo"><img src="./images/mainbnr.jpg" alt="메인 배너"></p>
                     <h2>New Golden Leaf</h2>
                     <h3>골든리프 런칭 | 반지 구매 시 파우치 키링 증정</h3>
@@ -132,7 +142,7 @@
                     <p class="photo"><img src="./images/mainbnr.jpg" alt="메인 배너"></p>
                     <h2>New Golden Leaf</h2>
                     <h3>골든리프 런칭 | 반지 구매 시 파우치 키링 증정</h3>
-                </div> <!-- 1행 메인배너 종료 -->
+                </div> --> <!-- 1행 메인배너 종료 -->
                 
             </div>
             <div class="swiper-button-prev"></div>
@@ -179,14 +189,82 @@
                 </li>
             </ul>
         </div> <!--e: 2행 gold~시계 카테고리 메뉴 종료 -->
+        <!-- 3행 BEST 섹션 -->
+        <div class="best_sec">
+            <h2>BEST</h2>
+            <p class="subtitle">이번주 인기상품을 만나보세요!</p>
+            <div class="best_category_group">
+                <button type="button" class="ring">반지</button>
+                <button type="button" class="earring">귀걸이</button>
+                <button type="button" class="piercing">피어싱</button>
+                <button type="button" class="necklace">목걸이</button>
+                <button type="button" class="couplering">커플링</button>
+                <button type="button" class="bracelet">팔찌&발찌</button>
+                <button type="button" class="diamond">다이아몬드</button>
+                <button type="button" class="24kgold">순금</button>
+                <button type="button" class="watch">시계</button>
+            </div>
+            <ul class="contents">
+                <li>
+                    <a href="">
+                        <p class="best_thumb"> 
+                        <img src="./images/best_thumb01.jpg" alt="">
+                        </p>
+                        <div class="product_desc">
+                            <h3 class="name">디어 리본 큐빅 10K 반지</h3>
+                            <p class="price">399,000원</p>
+                            <p class="review">리뷰 50</p>
+                        </div>    
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="best_thumb"> 
+                        <img src="./images/best_thumb02.jpg" alt="">
+                        </p>
+                        <div class="product_desc">
+                            <h3 class="name">왕관 물고기 10K 반지</h3>
+                            <p class="price">259,000원</p>
+                            <p class="review">리뷰 20</p>
+                        </div>    
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="best_thumb"> 
+                        <img src="./images/best_thumb03.jpg" alt="">
+                        </p>
+                        <div class="product_desc">
+                            <h3 class="name">베이직 탄생석 12월 콜렉트링 10K 여성 반지</h3>
+                            <p class="price">199,000원</p>
+                            <p class="review">리뷰 40</p>
+                        </div>    
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="best_thumb"> 
+                        <img src="./images/best_thumb04.jpg" alt="">
+                        </p>
+                        <div class="product_desc">
+                            <h3 class="name">튜더로즈가든 핑크 페어컷 14K 반지</h3>
+                            <p class="price">999,000원</p>
+                            <p class="review">리뷰 29</p>
+                        </div>    
+                    </a>
+                </li>
+            </ul>
+        </div><!-- 3행 BEST 섹션 종료 -->
         <!-- 4행  NEW 섹션 -->
         <div class="new_sec">
             <h2>NEW ITEM</h2>
             <ul class="contents">
                 <li>
                     <a href="#">
-                        <p class="new_thumb"><img src="./images/new_thumb01.jpg" alt=""></p>
-                        <!-- <button type="button" id="like_btn"></button> -->
+                        <p class="new_thumb">
+                            <img src="./images/new_thumb01.jpg" alt="">
+                            <!-- <button type="button" class="like_btn"><img src="./images/like_btn.svg" alt="찜하기"></button> -->
+                        </p>
                         <div class="product_desc">
                             <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
                             <h3 class="name">0.095ct 6프롱 다이아몬드 14K 목걸이</h3>
