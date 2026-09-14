@@ -43,7 +43,7 @@ header .menu_wrap .snb .login_btn_ img {}
 .menu_open_wrap { /* item 마우스오버 했을때 나오는 서브 메뉴 */
     margin-top:83px; height:370px; background:#fff;
     display: flex; position: fixed;  top:0; width:100%; 
-    border-top:1px solid var(--color-head-line); z-index: 200;
+    border-top:1px solid var(--color-head-line); z-index: 950;
 }
 .menu_open_wrap .menu_open_inner {
     width:var(--width-desk); margin:0 auto; padding-top:40px;
@@ -68,7 +68,7 @@ header .menu_wrap .snb .login_btn_ img {}
 .popup_bg {
     background-color: rgba(0,0,0,0.25);
     width:100%; height:100%; left:0; top:0;
-    position:absolute; z-index: 100;
+    position:absolute; z-index: 900;
 }
 
 /* 메인 슬라이드 */
@@ -82,8 +82,6 @@ header .menu_wrap .snb .login_btn_ img {}
 .hero-banner .swiper-wrapper .hero2{
     background-image:url(../images/mainbnr.jpg);
 }
-
-
 main .hero-banner .swiper-wrapper .swiper-slide .photo {
     height:850px; overflow: hidden;
 }
@@ -108,15 +106,37 @@ main .category_menu ul li .thumb {width:120px; height:120px; border-radius: 50%;
 main .category_menu ul li .thumb img {width:100%; height: 100%; object-fit: cover;}
 main .category_menu ul li .desc {text-align: center; font-weight: 500;}
 
+/* --------------------------------------------------------------------------------------- */
+
 /* 상품명,가격,리뷰 공통 디자인 */
 .product_desc .name {font-size:var(--font-size-prodname); margin-bottom: 10px; }
 .product_desc .price {font-weight: 700; margin-bottom: 18px;}
 .product_desc .review {font-size:var(--font-size-review);}
 
+
+/* VIEW MORE 버튼 디자인 */
+.viewmore_wrap {display:flex; justify-content: center;}
+.viewmore_wrap .viewmore_btn {
+    font-size:var(--font-size-s);
+    color:var(--color-dark);
+    border:0.6px solid var(--color-dark);
+    padding:10px 28px;
+    transition: all 0.35s ease-in-out;
+}
+.viewmore_wrap .viewmore_btn:hover{
+    background-color:var(--color-dark);
+    color:var(--color-light);
+}
+
+/* 상품 섹션별 타이틀 공통 디자인 */
+.item_sec_maintitle {font-size: var(--font-size-sectitle); font-weight:700; margin-bottom:15px;}
+.item_sec_subtitle {font-size:var(--font-size-subtitle);}
+
+/* --------------------------------------------------------------------------------------- */
 /* 3행 BEST 섹션 */
 main .best_sec {max-width:var(--width-desk); margin:0 auto;}
-main .best_sec h2 {font-size: var(--font-size-sectitle); font-weight:700; margin-bottom:15px;}
-main .best_sec .subtitle {font-size:var(--font-size-subtitle); margin-bottom:30px;}
+main .best_sec h2 {margin-bottom:15px;}
+main .best_sec .item_sec_subtitle { margin-bottom:30px;}
 main .best_sec .best_category_group {display: flex; gap:12px; margin-bottom: 50px;} /* 베스트 카테고리 메뉴 그룹 */
 main .best_sec .best_category_group button { 
     font-size:var(--font-size-catetext); color: var(--color-category-text);
@@ -130,27 +150,78 @@ main .best_sec .contents a {}
 main .best_sec .contents a .best_thumb {width:373px; height:374px; margin-bottom: 15px;}
 main .best_sec .contents a .best_thumb img {width:100%; height:100%;object-fit: cover;}
 main .best_sec .contents a .product_desc {}
-main .best_sec .contents a .product_desc .name {}
-main .best_sec .contents a .product_desc .price {}
-main .best_sec .contents a .product_desc .review {}
 
+
+
+/* NEW,오늘출발(5종 배너) 공통 디자인 */
+.product_thumb {width:294px; height:374px; margin-bottom: 15px;}
+.product_thumb img {width:100%; height:100%; object-fit:cover; }
 
 
 /* 4행 NEW 섹션 */
-main .new_sec {max-width: var(--width-desk); margin: 0 auto;}
-main .new_sec h2 {text-align: center; font-size: var(--font-size-sectitle); font-weight:700; margin-bottom:50px;}
+main .new_sec {max-width: var(--width-desk); margin: 0 auto; padding:140px 0 0 0;}
+main .new_sec .item_sec_maintitle {text-align: center; margin-bottom:50px;}
 main .new_sec .contents {
     display: flex; flex-flow:row nowrap; gap:20px; padding-bottom: 65px;
 }
 main .new_sec .contents li {}
 main .new_sec .contents li a {}
-main .new_sec .contents li a .new_thumb {width:294px; height:374px; margin-bottom: 15px;}
-main .new_sec .contents li a .new_thumb img {width:100%; height:100%; object-fit:cover; }
-main .new_sec .contents li a .new_thumb .like_btn {}
-main .new_sec .contents li a .new_thumb .like_btn img {}
+/* main .new_sec .contents li a .product_thumb {width:294px; height:374px; margin-bottom: 15px;} */
+/* main .new_sec .contents li a .product_thumb img {width:100%; height:100%; object-fit:cover; } */
 main .new_sec .contents li a .product_desc {}
 main .new_sec .contents li a .product_desc .new_icon {margin-bottom: 15px;}
 main .new_sec .contents li a .product_desc .new_icon img {}
-main .new_sec .contents li a .product_desc .name {}
-main .new_sec .contents li a .product_desc .price {}
-main .new_sec .contents li a .product_desc .review {}
+
+
+/* 7행 오늘출발 섹션 */
+main .today_sec {max-width: var(--width-desk); margin: 0 auto; padding:140px 0;}
+main .today_sec .item_sec_maintitle {text-align: center; margin-bottom:15px;}
+main .today_sec .item_sec_subtitle { margin-bottom:50px; text-align: center;}
+main .today_sec .contents {
+    display: flex; flex-flow:row nowrap; gap:20px; padding-bottom: 65px;
+}
+
+/* 8행 오프라인,공식몰 2종 배너 섹션 */
+main .lloyd_ad_banner {display: flex;  height:430px;}
+main .lloyd_ad_banner a:nth-child(1) {
+    background-image: url(../images/offline_adbanner.jpg); 
+    background-size:cover;
+    background-position: center;
+    flex:1;
+    position: relative; z-index: 450;
+}
+main .lloyd_ad_banner a:nth-child(1)::after {
+    content:''; width:100%; height:100%;
+    left:0; top:0; position: absolute; z-index: 500;
+    background: rgba(0,0,0,0.35);
+}
+main .lloyd_ad_banner a:nth-child(2) {
+    background-image: url(../images/benfit_adbanner.jpg); 
+    background-size:cover;
+    background-position: center;
+    flex:1;
+    position: relative;
+}
+main .lloyd_ad_banner a .lloyd_ad_title_g {position:absolute; left:80px; top:45%; z-index: 550;}
+main .lloyd_ad_banner a .lloyd_ad_title_g .lloyd_ad_title {font-size:2.188rem; font-weight:700; margin-bottom:16px;}
+main .lloyd_ad_banner a .lloyd_ad_title_g .lloyd_ad_des {font-size:var(--font-size-subtitle);}
+
+main .lloyd_ad_banner a:nth-child(1) * {color:var(--color-light);}
+
+/* 10행 3종 컬렉션 배너  */
+main .collection_banner {max-width: var(--width-desk); margin: 0 auto;}
+main .collection_banner .item_sec_maintitle {text-align:center;}
+main .collection_banner .item_sec_subtitle {text-align:center;}
+main .collection_contents {display: flex;}
+main .collection_contents > li {width:497px; height:625px;}
+main .collection_contents li a:nth-child(1) {
+    background-image: url(../images/collection_couplering.jpg);
+    background-size: cover;
+}
+main .collection_contents li a:nth-child(2) {
+    background-image: url(../images/collection_men.jpg);
+}
+main .collection_contents li a:nth-child(3) {
+    background-image: url(../images/collection_24k.jpg);
+}
+main .collection_contents li a {}

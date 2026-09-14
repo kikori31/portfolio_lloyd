@@ -50,7 +50,8 @@
             </div> <!-- e:snb -->
         </div><!-- e: menu_wrap -->
     </header>
-    <div class="menu_open_wrap"> <!-- 서브 메뉴 시작 -->
+    <!-- 서브 메뉴 시작 -->
+    <div class="menu_open_wrap"> 
         <div class="menu_open_inner"> 
             <ul class="menu_list"> <!-- 서브 메뉴_왼쪽 섹션 -->
                 <li class="middle_menu"><a href="#">GOLD</a>
@@ -147,7 +148,7 @@
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-        </div>
+        </div> <!--e: 1행 메인배너 종료 -->
         <!-- 2행 gold~시계 카테고리 메뉴 -->
         <div class="category_menu">
             <ul>
@@ -191,10 +192,10 @@
         </div> <!--e: 2행 gold~시계 카테고리 메뉴 종료 -->
         <!-- 3행 BEST 섹션 -->
         <div class="best_sec">
-            <h2>BEST</h2>
-            <p class="subtitle">이번주 인기상품을 만나보세요!</p>
+            <h2 class="item_sec_maintitle">BEST</h2>
+            <p class="item_sec_subtitle">이번주 인기상품을 만나보세요!</p>
             <div class="best_category_group">
-                <button type="button" class="ring">반지</button>
+                <button type="button" class="ring active">반지</button>
                 <button type="button" class="earring">귀걸이</button>
                 <button type="button" class="piercing">피어싱</button>
                 <button type="button" class="necklace">목걸이</button>
@@ -254,14 +255,18 @@
                     </a>
                 </li>
             </ul>
-        </div><!-- 3행 BEST 섹션 종료 -->
+            <!-- viewmore 버튼 -->
+            <div class="viewmore_wrap">
+                <a href="#" class="viewmore_btn">VIEW MORE</a>
+            </div><!-- viewmore 버튼 종료 -->
+        </div><!-- e: 3행 BEST 섹션 종료 -->
         <!-- 4행  NEW 섹션 -->
         <div class="new_sec">
-            <h2>NEW ITEM</h2>
+            <h2 class="item_sec_maintitle">NEW ITEM</h2>
             <ul class="contents">
                 <li>
                     <a href="#">
-                        <p class="new_thumb">
+                        <p class="product_thumb">
                             <img src="./images/new_thumb01.jpg" alt="">
                             <!-- <button type="button" class="like_btn"><img src="./images/like_btn.svg" alt="찜하기"></button> -->
                         </p>
@@ -275,7 +280,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <p class="new_thumb"><img src="./images/new_thumb02.jpg" alt=""></p>
+                        <p class="product_thumb"><img src="./images/new_thumb02.jpg" alt=""></p>
                         <!-- <button type="button" id="like_btn"></button> -->
                         <div class="product_desc">
                             <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
@@ -287,7 +292,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <p class="new_thumb"><img src="./images/new_thumb03.jpg" alt=""></p>
+                        <p class="product_thumb"><img src="./images/new_thumb03.jpg" alt=""></p>
                         <!-- <button type="button" id="like_btn"></button> -->
                         <div class="product_desc">
                             <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
@@ -299,7 +304,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <p class="new_thumb"><img src="./images/new_thumb04.jpg" alt=""></p>
+                        <p class="product_thumb"><img src="./images/new_thumb04.jpg" alt=""></p>
                         <!-- <button type="button" id="like_btn"></button> -->
                         <div class="product_desc">
                             <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
@@ -311,7 +316,7 @@
                 </li>
                 <li>
                     <a href="#">
-                        <p class="new_thumb"><img src="./images/new_thumb05.jpg" alt=""></p>
+                        <p class="product_thumb"><img src="./images/new_thumb05.jpg" alt=""></p>
                         <!-- <button type="button" id="like_btn"></button> -->
                         <div class="product_desc">
                             <p class="new_icon"><img src="./images/new_icon.svg" alt="new"></p>
@@ -322,7 +327,104 @@
                     </a>
                 </li>
             </ul>
-        </div>
+            <!-- viewmore 버튼 -->
+            <div class="viewmore_wrap">
+                <a href="#" class="viewmore_btn">VIEW MORE</a>
+            </div><!-- viewmore 버튼 종료 -->
+        </div><!-- e: 4행  NEW 섹션 종료 -->
+
+        <!-- 5행 랩 다이아몬드 섹션 -->
+        <section class="labdiamond_wrap">
+            
+        </section><!-- e: 5행 랩 다이아몬드 종료 -->
+        <!-- 7행  오늘출발 섹션 -->
+        <div class="today_sec">
+            <h2 class="item_sec_maintitle">오늘 출발</h2>
+            <p class="item_sec_subtitle">오후 2시 이전 주문하면, 당일 출발!</p>
+            <ul class="contents">
+                <li>
+                    <a href="#">
+                        <p class="product_thumb">
+                            <img src="./images/today_thumb01.jpg" alt="">
+                        </p>
+                        <div class="product_desc">
+                            <h3 class="name">하트인하트 핑크 다이아몬드 10K 목걸이</h3>
+                            <p class="price">429,000원</p>
+                            <p class="review">리뷰 26</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="product_thumb"><img src="./images/today_thumb02.jpg" alt=""></p>
+                        <div class="product_desc">
+                            <h3 class="name">크레센도 테니스 10K 원터치 링 귀걸이(M)</h3>
+                            <p class="price">259,000원</p>
+                            <p class="review">리뷰 40</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="product_thumb"><img src="./images/today_thumb03.jpg" alt=""></p>
+                        <div class="product_desc">
+                            <h3 class="name">더블 펜던트 10K 목걸이</h3>
+                            <p class="price">429,000원</p>
+                            <p class="review">리뷰 40</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="product_thumb"><img src="./images/today_thumb04.jpg" alt=""></p>
+                        <div class="product_desc">
+                            <h3 class="name">실버925 에센셜 파베십자가 팔찌</h3>
+                            <p class="price">49,000원</p>
+                            <p class="review">리뷰 20</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="product_thumb"><img src="./images/today_thumb05.jpg" alt=""></p>
+                        <div class="product_desc">
+                            <h3 class="name">쇼콜라 라운드 14K 귀걸이</h3>
+                            <p class="price">259,000원</p>
+                            <p class="review">리뷰 40</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- viewmore 버튼 -->
+            <div class="viewmore_wrap">
+                <a href="#" class="viewmore_btn">VIEW MORE</a>
+            </div><!-- viewmore 버튼 종료 -->
+        </div><!-- e: 7행 오늘출발 섹션 종료 -->
+        <!-- 8행 오프라인,공식몰 2종 배너 섹션 -->
+        <section class="lloyd_ad_banner">
+            <a href="#">
+                <div class="lloyd_ad_title_g">
+                    <h2 class="lloyd_ad_title">Off-Line Store</h2>
+                    <p class="lloyd_ad_des">가까운 로이드 매장을 찾아보세요</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="lloyd_ad_title_g">
+                    <h2 class="lloyd_ad_title">공식몰 단독 서비스</h2>
+                    <p class="lloyd_ad_des">로이드 공식몰에서만 누릴 수 있는 특별한 혜택!</p>
+                </div>
+            </a>
+        </section><!-- e: 8행 오프라인,공식몰 2종 배너 섹션 종료 -->
+        <!-- 10행 3종 컬렉션 배너 -->
+        <section class="collection_banner">
+            <h2 class="item_sec_maintitle">RECOMMENDED GIFT</h2>
+            <p class="item_sec_subtitle">로이드 선물 추천 컬렉션</p>
+            <ul class="collection_contents">
+                <li><a href="#"><h3 class="coll_maintitle">COUPLE RING</h3><p class="coll_subtitle">과하지 않은 빛으로 일상 속에서 자연스럽게 스며드는 디자인의 커플링</p></a></li>
+                <li><a href="#"><h3 class="coll_maintitle">FOR MEN</h3><p class="coll_subtitle">365일 착용해도 질리지 않는데일리 남성 주얼리</p></a></li>
+                <li><a href="#"><h3 class="coll_maintitle">24K GOLD</h3><p class="coll_subtitle">오랜 시간이 지나도 변함없는 가치,순도 99.9 골드</p></a></li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>
