@@ -6,11 +6,11 @@ header .menu_wrap{ /* 로고~아이콘까지 */
     display:flex; flex-flow:row nowrap;
     justify-content: space-between; align-items:center;
     margin:0 auto;  height:83px;
-    
 }
 header .menu_wrap .logo{}
 header .menu_wrap .logo a {}
 header .menu_wrap .logo a img {}
+
 /* 메인메뉴 시작 */
 header .menu_wrap nav {} 
 header .menu_wrap nav a { /* best~런칭캘린더 메뉴까지 */
@@ -40,29 +40,29 @@ header .menu_wrap .snb .login_btn_ img {}
 
 
 /* 서브 메뉴 */
-.menu_open_wrap { /* item 마우스오버 했을때 나오는 서브 메뉴 */
-    margin-top:83px; height:370px; background:#fff;
-    display: flex; position: fixed;  top:0; width:100%; 
+header .menu_open_wrap { /* item 마우스오버 했을때 나오는 서브 메뉴 */
+    height:370px; background:#fff;
+    display: flex; position: absolute;  top:83px; width:100%; 
     border-top:1px solid var(--color-head-line); z-index: 950;
 }
-.menu_open_wrap .menu_open_inner {
+header .menu_open_wrap .menu_open_inner {
     width:var(--width-desk); margin:0 auto; padding-top:40px;
     display:flex;  justify-content: space-between;
     
 } 
-.menu_open_wrap .menu_open_inner .menu_list {
+header .menu_open_wrap .menu_open_inner .menu_list {
     display:flex; gap:110px;
 }
-.menu_open_wrap .menu_open_inner .menu_list .middle_menu {}
-.menu_open_wrap .menu_open_inner .menu_list .middle_menu > a {font-weight:600;}
-.menu_open_wrap .menu_open_inner .menu_list .middle_menu:nth-child(2) > a {color:var(--color-primary);}
-.menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu { margin-top:28px;} 
-.menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li { margin-top:16px; font-size:0.875rem;} 
-.menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li > a {} 
+header .menu_open_wrap .menu_open_inner .menu_list .middle_menu {}
+header .menu_open_wrap .menu_open_inner .menu_list .middle_menu > a {font-weight:600;}
+header .menu_open_wrap .menu_open_inner .menu_list .middle_menu:nth-child(2) > a {color:var(--color-primary);}
+header .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu { margin-top:28px;} 
+header .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li { margin-top:16px; font-size:0.875rem;} 
+header .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li > a {} 
 
-.menu_open_wrap .menu_open_inner .menu_banner {}
-.menu_open_wrap .menu_open_inner .menu_banner a {}
-.menu_open_wrap .menu_open_inner .menu_banner a img {}
+header .menu_open_wrap .menu_open_inner .menu_banner {}
+header .menu_open_wrap .menu_open_inner .menu_banner a {}
+header .menu_open_wrap .menu_open_inner .menu_banner a img {}
 
 /* item메뉴 눌렀을 때 나오는 나오는 배경 */
 .popup_bg {
@@ -97,6 +97,15 @@ main .hero-banner .swiper-wrapper .swiper-slide h2 {
 main .hero-banner .swiper-wrapper .swiper-slide h3 {
     position: absolute; top:54%; left:15%; font-size: 1.188rem; 
 }
+/* swipeer 화살표 */
+main .hero-banner .swiper-button-prev,
+main .hero-banner .swiper-button-next {width:30px; height:30px; color:var(--color-dark);}
+/* hover */
+/* main .hero-banner .swiper-button-prev:hover,
+main .hero-banner .swiper-button-next:hover {color:#fac;} */
+/* disabled next, prev */
+main .hero-banner .swiper-button-disabled {color:#222; opacity:0.3;}
+
 /* 2행 카테고리 메뉴 */
 main .category_menu {padding:80px 0;}
 main .category_menu ul {display: flex; flex-flow:row nowrap; justify-content: center; gap:40px; }
