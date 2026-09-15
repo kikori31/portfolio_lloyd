@@ -18,6 +18,9 @@ seach_btn과 cart_btn에 2개에만 margin-right:24px를 줘서 문제를 해결
 * new 섹션
 
 9/15
+* 8행 오프라인,공식몰 2종 배너 섹션 
 * 6행 watch-섹션 -db 작업해야함.
 * viewmore 버튼 변수 / margin-bottom:65px 
-* 
+## 문제점
+* 8행 오프라인,공식몰 2종 배너 섹션이 div .watch_sec 으로 잡혀서 확인해보니 watch_sec </div> 종료 태그가 사라져 있었음. 
+* item 서브 메뉴 확인해보기! -> js 선택자 오류 및 css에서 li에 line-height:83px; 추가함
