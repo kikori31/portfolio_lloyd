@@ -91,7 +91,8 @@ main .hero-banner .swiper-wrapper .swiper-slide .photo img {
 }
 
 main .hero-banner .swiper-wrapper .swiper-slide h2 {
-    position: absolute; top:46%; left:15%; font-size: 2.813rem;
+    position: absolute; top:46%; left:15%; font-size:var(--font-size-maintitle);
+    font-family: var(font-family-maintitle);
 }
 
 main .hero-banner .swiper-wrapper .swiper-slide h3 {
@@ -100,6 +101,8 @@ main .hero-banner .swiper-wrapper .swiper-slide h3 {
 /* swipeer 화살표 */
 main .hero-banner .swiper-button-prev,
 main .hero-banner .swiper-button-next {width:30px; height:30px; color:var(--color-dark);}
+main .hero-banner .swiper-button-prev {transform: translateX(50px);}
+main .hero-banner .swiper-button-next {transform: translateX(-50px)}
 /* hover */
 /* main .hero-banner .swiper-button-prev:hover,
 main .hero-banner .swiper-button-next:hover {color:#fac;} */
@@ -141,6 +144,10 @@ main .category_menu ul li .desc {text-align: center; font-weight: 500;}
 .item_sec_maintitle {font-size: var(--font-size-sectitle); font-weight:700; margin-bottom:15px;}
 .item_sec_subtitle {font-size:var(--font-size-subtitle);}
 
+/* NEW,오늘출발(5종 배너) 공통 디자인 */
+.product_thumb {width:294px; height:374px; margin-bottom: 15px;}
+.product_thumb img {width:100%; height:100%; object-fit:cover; }
+
 /* --------------------------------------------------------------------------------------- */
 /* 3행 BEST 섹션 */
 main .best_sec {max-width:var(--width-desk); margin:0 auto;}
@@ -159,12 +166,6 @@ main .best_sec .contents a {}
 main .best_sec .contents a .best_thumb {width:373px; height:374px; margin-bottom: 15px;}
 main .best_sec .contents a .best_thumb img {width:100%; height:100%;object-fit: cover;}
 main .best_sec .contents a .product_desc {}
-
-
-
-/* NEW,오늘출발(5종 배너) 공통 디자인 */
-.product_thumb {width:294px; height:374px; margin-bottom: 15px;}
-.product_thumb img {width:100%; height:100%; object-fit:cover; }
 
 
 /* 4행 NEW 섹션 */
