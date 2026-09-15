@@ -92,7 +92,7 @@ main .hero-banner .swiper-wrapper .swiper-slide .photo img {
 
 main .hero-banner .swiper-wrapper .swiper-slide h2 {
     position: absolute; top:46%; left:15%; font-size:var(--font-size-maintitle);
-    font-family: var(font-family-maintitle);
+    font-family: var(font-family-maintitle); font-weight: 500;
 }
 
 main .hero-banner .swiper-wrapper .swiper-slide h3 {
