@@ -16,3 +16,8 @@ seach_btn과 cart_btn에 2개에만 margin-right:24px를 줘서 문제를 해결
 * 6개 카테고리 만들기 -> 완료
 * best 섹션
 * new 섹션
+
+9/15
+* 6행 watch-섹션 -db 작업해야함.
+* viewmore 버튼 변수 / margin-bottom:65px 
+* 

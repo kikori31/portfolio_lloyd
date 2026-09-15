@@ -12,6 +12,14 @@
     --width-desk-full:1920px;
     --width-desk:1550px;
 
+    /* 간격 */
+    --spacing-sec-bottom:50px;
+
+    /* 폰트 굵기*/
+    --font-weight-b : 700;
+    --font-weight-sb : 600;
+    --font-weight-m : 500;
+
     /* 폰트 크기 */
     --font-size-maintitle:2.813rem; /* 메인배너 40px */
     --font-size-sectitle :2.188rem; /* 섹션 타이틀(best,new 등) 35px */

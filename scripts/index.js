@@ -49,7 +49,7 @@ const slide = new Swiper('.hero-banner',{
 // });
 
 //카테고리메뉴 생성
-const categoryMenu = document.querySelector("div.category_menu > ul");
+const categoryMenu = document.querySelector("div.category_menu > .category_wrap");
 for (let i = 0 ; i < categoryDB.length ; i++) {
     const categoryLi = document.createElement('li');
 
@@ -115,6 +115,10 @@ for(let i = 0; i < newDB.length ; i++){
                     `;
     newContents.appendChild(newLi);
 }
+
+// 6행 watch 섹션
+
+
 
 // 7행 오늘출발 섹션
 const todayContents = document.querySelector('.today_sec > ul.contents');

@@ -15,12 +15,12 @@ header .menu_wrap .logo a img {}
 header .menu_wrap nav {display:flex; justify-content:space-between; width:711px;} 
 header .menu_wrap nav a { /* best~런칭캘린더 메뉴까지 */
     position: relative; /* .menu_wrap nav a::after 포지션 주기 위해서 position:relative 줌 */
-    font-weight: 500;
+    font-weight: var(--font-weight-m);
 }
 
 header .menu_wrap nav a:nth-child(7){ /* 런칭캘린더 메뉴 */
     color:var(--color-primary);
-    font-weight:600;
+    font-weight:var(--font-weight-sb);
 }
 header .menu_wrap nav a::after {
     content:''; display:block; width:100%; height:1.5px; left:0; bottom:-8px;
@@ -55,7 +55,7 @@ header .menu_open_wrap .menu_open_inner .menu_list {
     display:flex; gap:110px;
 }
 header .menu_open_wrap .menu_open_inner .menu_list .middle_menu {}
-header .menu_open_wrap .menu_open_inner .menu_list .middle_menu > a {font-weight:600;}
+header .menu_open_wrap .menu_open_inner .menu_list .middle_menu > a {font-weight:var(--font-weight-sb);}
 header .menu_open_wrap .menu_open_inner .menu_list .middle_menu:nth-child(2) > a {color:var(--color-primary);}
 header .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu { margin-top:28px;} 
 header .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li { margin-top:16px; font-size:0.875rem;} 
@@ -93,7 +93,7 @@ main .hero-banner .swiper-wrapper .swiper-slide .photo img {
 
 main .hero-banner .swiper-wrapper .swiper-slide h2 {
     position: absolute; top:46%; left:15%; font-size:var(--font-size-maintitle);
-    font-family: var(font-family-maintitle); font-weight: 500;
+    font-family: var(font-family-maintitle); font-weight:var(--font-weight-m);
 }
 
 main .hero-banner .swiper-wrapper .swiper-slide h3 {
@@ -117,13 +117,13 @@ main .category_menu ul li {}
 main .category_menu ul li a {}
 main .category_menu ul li .thumb {width:120px; height:120px; border-radius: 50%; overflow: hidden; margin-bottom:15px;}
 main .category_menu ul li .thumb img {width:100%; height: 100%; object-fit: cover;}
-main .category_menu ul li .desc {text-align: center; font-weight: 500;}
+main .category_menu ul li .desc {text-align: center; font-weight:var(--font-weight-m);}
 
 /* --------------------------------------------------------------------------------------- */
 
 /* 상품명,가격,리뷰 공통 디자인 */
 .product_desc .name {font-size:var(--font-size-prodname); margin-bottom: 10px; }
-.product_desc .price {font-weight: 700; margin-bottom: 18px;}
+.product_desc .price {font-weight:var(--font-weight-b); margin-bottom: 18px;}
 .product_desc .review {font-size:var(--font-size-review);}
 
 
@@ -142,7 +142,7 @@ main .category_menu ul li .desc {text-align: center; font-weight: 500;}
 }
 
 /* 상품 섹션별 타이틀 공통 디자인 */
-.item_sec_maintitle {font-size: var(--font-size-sectitle); font-weight:700; margin-bottom:15px;}
+.item_sec_maintitle {font-size: var(--font-size-sectitle); font-weight:var(--font-weight-b); margin-bottom:15px;}
 .item_sec_subtitle {font-size:var(--font-size-subtitle);}
 
 /* NEW,오늘출발(5종 배너) 공통 디자인 */
@@ -154,7 +154,7 @@ main .category_menu ul li .desc {text-align: center; font-weight: 500;}
 main .best_sec {max-width:var(--width-desk); margin:0 auto;}
 main .best_sec h2 {margin-bottom:15px;}
 main .best_sec .item_sec_subtitle { margin-bottom:30px;}
-main .best_sec .best_category_group {display: flex; gap:12px; margin-bottom: 50px;} /* 베스트 카테고리 메뉴 그룹 */
+main .best_sec .best_category_group {display: flex; gap:12px; margin-bottom:var(--spacing-sec-bottom);} /* 베스트 카테고리 메뉴 그룹 */
 main .best_sec .best_category_group button { 
     font-size:var(--font-size-catetext); color: var(--color-category-text);
     border: 1px solid var(--color-category-line); border-radius: 20px; padding: 6px 17px; 
@@ -171,7 +171,7 @@ main .best_sec .contents a .product_desc {}
 
 /* 4행 NEW 섹션 */
 main .new_sec {max-width: var(--width-desk); margin: 0 auto; padding:140px 0 0 0;}
-main .new_sec .item_sec_maintitle {text-align: center; margin-bottom:50px;}
+main .new_sec .item_sec_maintitle {text-align: center; margin-bottom:var(--spacing-sec-bottom);}
 main .new_sec .contents {
     display: flex; flex-flow:row nowrap; gap:20px; padding-bottom: 65px;
 }
@@ -184,11 +184,34 @@ main .new_sec .contents li a .product_desc .new_icon {margin-bottom: 15px;}
 main .new_sec .contents li a .product_desc .new_icon img {}
 
 
+/* 6행 워치스트랩 섹션*/
+main .watch_sec {max-width: var(--width-desk); margin:0 auto; padding:140px 0 0 0;}
+main .watch_sec .item_sec_maintitle {text-align:center;}
+main .watch_sec .item_sec_subtitle  {text-align:center; margin-bottom:var(--spacing-sec-bottom);}
+main .watch_sec .item_wrap  {} /* 시계 전체 감싸는 레이아웃 */
+main .watch_sec .item_wrap .item_contents {display:flex; gap:30px;} /* 시계 3종 레이아웃(ul) */
+main .watch_sec .item_wrap .item_contents .item_all_list {} /* 각각 li */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_big {} /* big 컨텐츠 (a) */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_big img {} /* big 이미지 */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns {} /* small_contetnts (ul) */ 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li {}  /* small_contetnts (li) */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small {display: flex; gap:25px;}  /* small 컨텐츠(a) */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_small_thumb {width:120px; height:120px;}  
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_small_thumb img {width:100%;height:100%; object-fit:cover;} /* small 이미지 */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info {display:flex; align-items: center; position: relative;} /* 상품명~버튼까지  */ 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .name_review_wrap .item_name {font-size:var(--font-size-prodname); margin-bottom: 10px;} 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .name_review_wrap .item_price {font-size:var(--font-subtitle); font-weight:var(--font-weight-b); margin-bottom:15px;} 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .name_review_wrap .item_review {font-size:var(--font-size-review);} 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_info  .like_btn {position: absolute; right:-70px;} 
+
+
+
 /* 7행 오늘출발 섹션 */
-main .today_sec {max-width: var(--width-desk); margin: 0 auto; padding:140px 0;}
+main .today_sec {/* max-width: var(--width-desk); margin: 0 auto; */ padding:140px 0;}
 main .today_sec .item_sec_maintitle {text-align: center; margin-bottom:15px;}
-main .today_sec .item_sec_subtitle { margin-bottom:50px; text-align: center;}
+main .today_sec .item_sec_subtitle { margin-bottom:var(--spacing-sec-bottom); text-align: center;}
 main .today_sec .contents {
+    max-width: var(--width-desk); margin: 0 auto; /* 9/15 원래는 .today_sec 입력했는데 .today_sec .contents 해봄 */
     display: flex; flex-flow:row nowrap; gap:20px; padding-bottom: 65px;
 }
 
@@ -214,25 +237,8 @@ main .lloyd_ad_banner a:nth-child(2) {
     position: relative;
 }
 main .lloyd_ad_banner a .lloyd_ad_title_g {position:absolute; left:80px; top:45%; z-index: 550;}
-main .lloyd_ad_banner a .lloyd_ad_title_g .lloyd_ad_title {font-size:2.188rem; font-weight:700; margin-bottom:16px;}
+main .lloyd_ad_banner a .lloyd_ad_title_g .lloyd_ad_title {font-size:2.188rem; font-weight:var(--font-weight-b); margin-bottom:16px;}
 main .lloyd_ad_banner a .lloyd_ad_title_g .lloyd_ad_des {font-size:var(--font-size-subtitle);}
 
 main .lloyd_ad_banner a:nth-child(1) * {color:var(--color-light);}
 
-/* 10행 3종 컬렉션 배너  */
-main .collection_banner {max-width: var(--width-desk); margin: 0 auto;}
-main .collection_banner .item_sec_maintitle {text-align:center;}
-main .collection_banner .item_sec_subtitle {text-align:center;}
-main .collection_contents {display: flex;}
-main .collection_contents > li {width:497px; height:625px;}
-main .collection_contents li a:nth-child(1) {
-    background-image: url(../images/collection_couplering.jpg);
-    background-size: cover;
-}
-main .collection_contents li a:nth-child(2) {
-    background-image: url(../images/collection_men.jpg);
-}
-main .collection_contents li a:nth-child(3) {
-    background-image: url(../images/collection_24k.jpg);
-}
-main .collection_contents li a {}
