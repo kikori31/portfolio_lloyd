@@ -74,7 +74,7 @@ header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_banne
     width:100%; height:100%; left:0; top:0;
     position:absolute; z-index: 900;
 }
-
+main{}
 /* 1행 메인 배너 시작 */
 /* swiper(보이는 영역) > swiper-wrapper (움직이는대상) > swiper-slide(개별슬라이드) */
 main  .hero .hero-banner {height:904px;}
@@ -272,28 +272,32 @@ main .lloyd_ad_banner a .lloyd_ad_title_g .lloyd_ad_des {font-size:var(--font-si
 main .lloyd_ad_banner a:nth-child(1) * {color:var(--color-light);}
 
 /* 10행 선물 추천(3종 배너) */
-main .gift_sec {margin-top:140px; } /* 9행 준비 전 간격 테스트 140px*/
-main .gift_sec .item_sec_maintitle {text-align:center;}
-main .gift_sec .item_sec_subtitle {text-align:center; margin-bottom:var(--spacing-sec-bottom);}
-main .gift_sec .gift_container {
-    max-width: var(--width-desk); margin: 0 auto;
-    display: flex; justify-content: space-between;
-}
-main .gift_sec .gift_container a {}
-main .gift_sec .gift_container a .gift_thumb{position: relative;}
-main .gift_sec .gift_container a .gift_thumb img{}
-main .gift_sec .gift_container a .gift_thumb::after{
-    
-}
-main .gift_sec .gift_container .gift_list1{}
-main .gift_sec .gift_container .gift_list1:hover {
 
+main .gift_sec {text-align: center; margin-top: 140px;}
+main .gift_sec .card_list {display: flex; justify-content: center; width:var(--width-desk); gap:30px; margin:0 auto;}
+main .gift_sec .item_sec_subtitle {margin-bottom: var(--spacing-sec-bottom);}
+main .gift_sec .card_list .card_link { display:flex; justify-content: center;  position: relative;}
+main .gift_sec .card_list .card_link::after{
+    content:''; left:0; top:0; display: block;
+    width:100%; height:100%; background-color: rgba(0,0,0,0.6);
+    position: absolute; z-index: 200;
+    opacity: 0; transition: opacity 0.4s ease;
+} 
+main .gift_sec .card_list .card_link:hover::after{
+    opacity: 1;
 }
-
-main .gift_sec .gift_container a .gift_title_g {
-    
+main .gift_sec .card_list .card_link img {width:100%; height:100%; object-fit: cover;}
+main .gift_sec .card_list .card_link .card_content {position: absolute; top:70%; z-index:250;} 
+main .gift_sec .card_list .card_link .card_content * {
+    color:var(--color-light);
+    font-size:var(--font-size-gift);
 }
-main .gift_sec .gift_container a .gift_title_g * {color:var(--color-light); position: absolute;}
-main .gift_sec .gift_container a .gift_title_g .gift_main_t {top:60%; left:50%;}
-main .gift_sec .gift_container a .gift_title_g .gift_sub_t {}
+main .gift_sec .card_list .card_link .card_content .card_title {
+    font-size:var(--font-size-giftmain); margin-bottom:var(--spacing-giftmain);
+    font-weight:var(--font-weight-m);
+}
+main .gift_sec .card_list .card_link .card_content .card_desc {font-size:var(--font-size-gift); margin-bottom:var(--spacing-giftbtn); line-height: 1.4;}
+main .gift_sec .card_list .card_link .card_content .gift_btn {
+    font-size:var(--font-size-review); border:1px solid #fff; display: inline; padding:6px 18px;
+}
 
