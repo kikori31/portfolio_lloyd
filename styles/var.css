@@ -13,9 +13,10 @@
     --width-desk:1550px;
 
     /* 간격 */
-    --spacing-sec-bottom:50px;
-    --spacing-view-btn:65px;
-    --spacing-watch:15px;
+    --spacing-sec-bottom:50px; /* 섹션별 타이틀과 컨텐츠 간격 */
+    --spacing-view-btn:65px; /* view more 버튼 간격 */
+    --spacing-watch:15px; /* */
+    --spacing-sec-all : 140px;
 
     /* 폰트 굵기*/
     --font-weight-b : 700;

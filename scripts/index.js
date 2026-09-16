@@ -142,6 +142,25 @@ for(let i = 0; i < newDB.length ; i++){
 }
 
 // 6행 watch 섹션
+// const watchContents = document.querySelector('.watch_sec > ul.item_small_contetns');
+// for(let i = 0; i < watchDB.length ; i++){
+//     const watchLi = document.querySelector('li');
+
+//     watchLi.innerHtml = `<li> <!-- 리스트 시작01 -->
+//                                 <a href="#" class="item_small">
+//                                     <p class="item_small_thumb"><img src="${watchDB[i].image}" alt="${watchDB[i].image_alt}"></p>
+//                                     <div class="item_info">
+//                                         <div class="name_review_wrap">
+//                                             <h3 class="item_name">${watchDB[i].name}</h3>
+//                                             <p class="item_price">${watchDB[i].price}</p>
+//                                             <p class="item_review">${watchDB[i].review}리뷰 35</p>
+//                                         </div>
+//                                         <button type="button" class="like_btn"><img src="./images/like_btn.svg" alt=""></button>
+//                                     </div>
+//                                 </a>
+//                             </li>
+//                         `;
+// }
 
 
 

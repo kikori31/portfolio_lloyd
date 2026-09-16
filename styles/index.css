@@ -201,13 +201,18 @@ main .watch_sec {max-width: var(--width-desk); margin:0 auto; padding:140px 0 0 
 main .watch_sec .item_sec_maintitle {text-align:center;}
 main .watch_sec .item_sec_subtitle  {text-align:center; margin-bottom:var(--spacing-sec-bottom);}
 main .watch_sec .item_wrap  {} /* 시계 전체 감싸는 레이아웃 */
-main .watch_sec .item_wrap .item_contents {display:flex; gap:30px; margin-bottom: var(--spacing-view-btn);} /* 시계 3종 레이아웃(ul) */
+main .watch_sec .item_wrap .item_contents { /* 시계 3종 레이아웃(ul) */
+    display:flex; 
+    justify-content:space-between; /* gap:30px;(기존) ->9.16 space-between으로 바꿈.(피그마랑 달라져서 체크해야함) */ 
+    width:var(--width-desk); 
+    margin-bottom: var(--spacing-view-btn);} 
 main .watch_sec .item_wrap .item_contents .item_all_list {} /* 각각 li */
 main .watch_sec .item_wrap .item_contents .item_all_list .item_big {} /* big 컨텐츠 (a) */
 main .watch_sec .item_wrap .item_contents .item_all_list .item_big img {margin-bottom:var(--spacing-watch);} /* big 이미지 */
 main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns {} /* small_contetnts (ul) */ 
 main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li {margin-bottom: var(--spacing-watch);}  /* small_contetnts (li) */
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small {display: flex; gap:25px;}  /* small 컨텐츠(a) */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small {  /* small 컨텐츠(a) */
+    display: flex; gap:25px;} 
 main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_small_thumb {
     width:120px; height:120px;
 }  
@@ -232,7 +237,7 @@ main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li
 
 /* 7행 오늘출발 섹션 */
 main .today_sec {/* max-width: var(--width-desk); margin: 0 auto; */ padding:140px 0;}
-main .today_sec .item_sec_maintitle {text-align: center; margin-bottom:15px;}
+main .today_sec .item_sec_maintitle {text-align: center;}
 main .today_sec .item_sec_subtitle { margin-bottom:var(--spacing-sec-bottom); text-align: center;}
 main .today_sec .contents {
     max-width: var(--width-desk); margin: 0 auto; /* 9/15 원래는 .today_sec 입력했는데 .today_sec .contents 해봄 */
@@ -265,4 +270,30 @@ main .lloyd_ad_banner a .lloyd_ad_title_g .lloyd_ad_title {font-size:2.188rem; f
 main .lloyd_ad_banner a .lloyd_ad_title_g .lloyd_ad_des {font-size:var(--font-size-subtitle);}
 
 main .lloyd_ad_banner a:nth-child(1) * {color:var(--color-light);}
+
+/* 10행 선물 추천(3종 배너) */
+main .gift_sec {margin-top:140px; } /* 9행 준비 전 간격 테스트 140px*/
+main .gift_sec .item_sec_maintitle {text-align:center;}
+main .gift_sec .item_sec_subtitle {text-align:center; margin-bottom:var(--spacing-sec-bottom);}
+main .gift_sec .gift_container {
+    max-width: var(--width-desk); margin: 0 auto;
+    display: flex; justify-content: space-between;
+}
+main .gift_sec .gift_container a {}
+main .gift_sec .gift_container a .gift_thumb{position: relative;}
+main .gift_sec .gift_container a .gift_thumb img{}
+main .gift_sec .gift_container a .gift_thumb::after{
+    
+}
+main .gift_sec .gift_container .gift_list1{}
+main .gift_sec .gift_container .gift_list1:hover {
+
+}
+
+main .gift_sec .gift_container a .gift_title_g {
+    
+}
+main .gift_sec .gift_container a .gift_title_g * {color:var(--color-light); position: absolute;}
+main .gift_sec .gift_container a .gift_title_g .gift_main_t {top:60%; left:50%;}
+main .gift_sec .gift_container a .gift_title_g .gift_sub_t {}
 
