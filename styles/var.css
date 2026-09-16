@@ -14,6 +14,8 @@
 
     /* 간격 */
     --spacing-sec-bottom:50px;
+    --spacing-view-btn:65px;
+    --spacing-watch:15px;
 
     /* 폰트 굵기*/
     --font-weight-b : 700;

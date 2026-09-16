@@ -1,5 +1,6 @@
 /* lloyd_db.js */
 
+//2행 gold~시계 카테고리 메뉴
 const categoryDB = [
     {
         id: 1,
@@ -38,7 +39,7 @@ const categoryDB = [
         image_alt: '시계'
     },
 ];
-
+// 3행 BEST 카테고리 섹션
 const bestCategoryDB = [
     {
         id: 1,
@@ -87,6 +88,7 @@ const bestCategoryDB = [
     },
 ];
 
+// 3행 BEST 섹션
 const bestDB = [
     {
         id: 1,
@@ -414,6 +416,7 @@ const bestDB = [
     },
 ];
 
+//4행  NEW 섹션
 const newDB = [
     {
         id: 1,
@@ -466,7 +469,19 @@ const newDB = [
         icon_alt: ''
     },
 ];
+//6행 워치 스트랩 섹션
+const watchDB = [
+    {
+        id: 1,
+        name: '어썸스퀘어 마더오브펄 여성 가죽시계 아이보리',
+        price: 199000,
+        review_count: 35,
+        image: './images/women_watch01.jpg',
+        image_alt: '',
+    },
+]
 
+//7행  오늘출발 섹션
 const todayDB = [
     {
         id: 1,
