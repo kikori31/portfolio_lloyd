@@ -62,6 +62,24 @@ const slide = new Swiper('.hero-banner',{
     }
 })
 
+//swiper 웨딩 배너
+const weddingSlide = new Swiper('.wedding-banner',{
+    direction:'horizontal',
+    loot:true,
+    slidesPerView:1,
+    // autoplay:{
+    //     delay:6000,
+    //     disableOnInteraction:false,
+    // },
+    navigation:{
+        nextEl:'.swiper-button-next',
+        prevEl:'.swiper-button-prev'
+    },
+})
+
+
+
+
 // 베스트 카테고리 메뉴 활성화
 // bestCategory.forEach((o)=>{
 //     o.addEventListener('click',()=>{

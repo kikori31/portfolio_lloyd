@@ -123,19 +123,12 @@
     </header>
 
     <div class="popup_bg"></div> <!-- ITEM 메뉴 눌렀을 때 나오는 배경 -->
-
-    <!-- <div class="search_open_wrap">
-        <div class="search_open_inner">
-            <input type="text" id="" placeholder="검색어를 입력해주세요.">
-        </div>
-    </div> -->
-
     <main>
         <!-- 1행 메인배너 -->
         <div class="hero">
             <div class="swiper hero-banner">
                 <div class="swiper-wrapper">
-                    <a href="#" class="swiper-slide hero1">
+                    <a href="#" class="swiper-slide hero1" >
                         <h2 class="right_title">New Season, New Sparkle:26 F/W</h2>
                         <h3 class="right_subtitle">선선해진 계절, 신규 주얼리 라인업을 지금 바로 만나보세요.</h3>
                     </a>
@@ -298,22 +291,103 @@
         </section><!-- e: 8행 오프라인,공식몰 2종 배너 섹션 종료 -->
 
         <!-- 9행 웨딩 섹션 -->
-        <!-- <div class="wedding_sec">
+        <div class="wedding_sec">
             <h2 class="item_sec_maintitle">Wedding</h2>
             <p class="item_sec_subtitle">서로 다른 우리가 만드는 조화</p>
-            <ul class="contents">
-                <div class="swiper wedding-banner">
-                    <div class="swiper-wrapper">
-                        <a href="#" class="swiper-slide wedding">
-                        <ul class="wedding_prod_list">
-                            <li>
+            <div class="swiper wedding-banner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide wedding"> <!--(웨딩)전체 감싸는 레이아웃 -->
+                        <a href="#" class="wed_link"> <!-- (왼쪽)웨딩 큰 이미지 시작 -->
+                            <p class="wed_thumb"><img src="./images/wedding_big.png" alt="웨딩 컬렉션"></p>
+                            <div class="wed_title_g">
+                                <p>ESSENTIAL-C</p>
+                                <p><span>따뜻한 햇살의 무드를 샴페인 골드 컬러에 녹여내 고급스러움을</span><span>추구하는 커플을 위한 에션셜 C-컬렉션입니다.</span></p>
+                            </div>
+                        </a>
+                        <ul class="wed_prod_list"> <!-- (오른쪽)웨딩 상품 리스트 시작 -->
+                            <li class="prod wed1"> <!-- 웨딩 상품 리스트01 -->
                                 <a href="#">
-                                    
+                                    <img src="./images/wedding_prod01.jpg" alt="다이아 14K 여성 웨딩밴드">
+                                    <div class="wed_prod_desc">
+                                        <h3 class="name">[에센셜C] | 다이아 14K 남성 웨딩밴드</h3>
+                                        <p class="price">899,000원</p>
+                                        <p class="review">리뷰 19</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prod wed2"> <!-- 웨딩 상품 리스트02 -->
+                                <a href="#">
+                                    <img src="./images/wedding_prod01.jpg" alt="다이아 14K 여성 웨딩밴드">
+                                    <div class="wed_prod_desc">
+                                        <h3 class="name">[에센셜C] ||| 다이아 14K 여성 웨딩밴드</h3>
+                                        <p class="price">599,000원</p>
+                                        <p class="review">리뷰 30</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prod wed3"> <!-- 웨딩 상품 리스트03 -->
+                                <a href="#">
+                                    <img src="./images/wedding_prod01.jpg" alt="다이아 14K 여성 웨딩밴드">
+                                    <div class="wed_prod_desc">
+                                        <h3 class="name">[에센셜C] | 다이아 14K 여성 웨딩밴드</h3>
+                                        <p class="price">599,000원</p>
+                                        <p class="review">리뷰 25</p>
+                                    </div>
                                 </a>
                             </li>
                         </ul>
-            </ul>
-        </div> -->
+                    </div>
+                    <div class="swiper-slide wedding"> <!--(웨딩)전체 감싸는 레이아웃 -->
+                        <a href="#" class="wed_link"> <!-- (왼쪽)웨딩 큰 이미지 시작 -->
+                            <p class="wed_thumb"><img src="./images/wedding_big.png" alt="웨딩 컬렉션"></p>
+                            <div class="wed_title_g">
+                                <p>ESSENTIAL-C</p>
+                                <p><span>따뜻한 햇살의 무드를 샴페인 골드 컬러에 녹여내 고급스러움을</span><span>추구하는 커플을 위한 에션셜 C-컬렉션입니다.</span></p>
+                            </div>
+                        </a>
+                        <ul class="wed_prod_list"> <!-- (오른쪽)웨딩 상품 리스트 시작 -->
+                            <li class="prod wed1"> <!-- 웨딩 상품 리스트01 -->
+                                <a href="#">
+                                    <img src="./images/wedding_prod01.jpg" alt="다이아 14K 여성 웨딩밴드">
+                                    <div class="wed_prod_desc">
+                                        <h3 class="name">[에센셜C] | 다이아 14K 남성 웨딩밴드</h3>
+                                        <p class="price">899,000원</p>
+                                        <p class="review">리뷰 19</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prod wed2"> <!-- 웨딩 상품 리스트02 -->
+                                <a href="#">
+                                    <img src="./images/wedding_prod01.jpg" alt="다이아 14K 여성 웨딩밴드">
+                                    <div class="wed_prod_desc">
+                                        <h3 class="name">[에센셜C] ||| 다이아 14K 여성 웨딩밴드</h3>
+                                        <p class="price">599,000원</p>
+                                        <p class="review">리뷰 30</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="prod wed3"> <!-- 웨딩 상품 리스트03 -->
+                                <a href="#">
+                                    <img src="./images/wedding_prod01.jpg" alt="다이아 14K 여성 웨딩밴드">
+                                    <div class="wed_prod_desc">
+                                        <h3 class="name">[에센셜C] | 다이아 14K 여성 웨딩밴드</h3>
+                                        <p class="price">599,000원</p>
+                                        <p class="review">리뷰 25</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+            <!-- viewmore 버튼 -->
+            <div class="viewmore_wrap">
+                <a href="#" class="viewmore_btn">VIEW MORE</a>
+            </div><!-- viewmore 버튼 종료 -->
+        </div>
 
         <!-- 10행 선물 추천 섹션 -->
         <div class="gift_sec">
@@ -325,7 +399,7 @@
                     <img src="./images/collection_couplering.jpg" alt="커플링">
                     <div class="card_content">
                         <h3 class="card_title">COUPLE RING</h3>
-                        <p class="card_desc">과하지 않은 빛으로 일상 속에서 <br> 자연스럽게 스며드는 디자인의 커플링</p>
+                        <p class="card_desc"><span>과하지 않은 빛으로 일상 속에서</span><span>자연스럽게 스며드는 디자인의 커플링</span></p>
                         <div class="gift_btn">VIEW MORE</div>
                     </div>
                 </a>
@@ -334,7 +408,7 @@
                     <img src="./images/collection_men.jpg" alt="커플링">
                     <div class="card_content">
                         <h3 class="card_title">FOR MEN</h3>
-                        <p class="card_desc">365일 착용해도 질리지 않는 <br> 데일리 남성 주얼리</p>
+                        <p class="card_desc"><span>365일 착용해도 질리지 않는</span><span>데일리 남성 주얼리</span></p>
                         <div class="gift_btn">VIEW MORE</div>
                     </div>
                 </a>
@@ -343,7 +417,7 @@
                     <img src="./images/collection_24k.jpg" alt="커플링">
                     <div class="card_content">
                         <h3 class="card_title">24K GOLD</h3>
-                        <p class="card_desc">오랜 시간이 지나도 변함없는 가치,<br> 순도 99.9 골드</p>
+                        <p class="card_desc"><span>오랜 시간이 지나도 변함없는 가치,</span><span>순도 99.9 골드</span></p>
                         <div class="gift_btn">VIEW MORE</div>
                     </div>
                 </a>
