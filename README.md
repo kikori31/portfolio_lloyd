@@ -30,3 +30,6 @@ seach_btn과 cart_btn에 2개에만 margin-right:24px를 줘서 문제를 해결
 
 9/18
 * font-family:var(--font-family-maintitle); --기호 오류
+* like_btn 활성화 - js 완료
+* best-o / new-o / 시계-o / 오늘 발송-o
+* 메인배너- 타이틀 간격

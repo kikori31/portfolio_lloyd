@@ -41,13 +41,6 @@ function hideMenu(){
 //     popup_bg.style.display = 'none';
 // }
 
-// like_btn 활성화 --------------------------------------------------
-
-const likeBtn = document.querySelector('#like_btn');
-likeBtn.addEventListener('click',()=>{
-    likeBtn.classList.toggle('like_active');
-})
-
 //swiper 메인 배너 --------------------------------------------------
 
 const slide = new Swiper('.hero-banner',{
@@ -73,15 +66,31 @@ const weddingSlide = new Swiper('.wedding-banner',{
     direction:'horizontal',
     loot:true,
     slidesPerView:1,
-    // autoplay:{
-    //     delay:6000,
-    //     disableOnInteraction:false,
-    // },
+    autoplay:{
+        delay:6000,
+        disableOnInteraction:false,
+    },
     navigation:{
         nextEl:'.swiper-button-next',
         prevEl:'.swiper-button-prev'
     },
 })
+
+//swiper 웨딩 배너 --------------------------------------------------
+// const diaSlide = new Swiper('.dia-banner',{
+//     direction:'horizontal',
+//     loot:true,
+//     slidesPerView:1.5,
+//     effect: 'fade',
+//     autoplay:{
+//         delay:6000,
+//         disableOnInteraction:false,
+//     },
+//     navigation:{
+//         nextEl:'.swiper-button-next',
+//         prevEl:'.swiper-button-prev'
+//     },
+// })
 
 
 
@@ -144,6 +153,35 @@ for (let i = 0 ; i < bestCategoryDB.length ; i++) {
 // 3행 BEST 섹션
 showCategoryItem("ring");
 
+// 3행 best 섹션 --------------------------------------------------
+
+function showCategoryItem(categoryType) {
+    const bestContents = document.querySelector('.best_sec > ul.contents');
+    bestContents.innerHTML = "";
+    
+    for(let i = 0; i < bestDB.length ; i++){
+        if (bestDB[i].type != categoryType) {
+            continue;
+        }
+
+        const bestLi = document.createElement('li');
+    
+        bestLi.innerHTML = `<a href="#">
+                                <p class="best_thumb">
+                                    <img src="${bestDB[i].image}" alt="${bestDB[i].image_alt}">
+                                </p>
+                                <div class="product_desc">
+                                    <h3 class="name">${bestDB[i].name}</h3>
+                                    <p class="price">${bestDB[i].price.toLocaleString()}원</p>
+                                    <p class="review">리뷰 ${bestDB[i].review_count}</p>
+                                </div>
+                            </a>
+                            <button type="button" class="like_btn"></button>
+                        `;
+        bestContents.appendChild(bestLi);
+    } 
+}
+
 
 //4행  NEW 섹션
 const newContents = document.querySelector(".new_sec > ul.contents");
@@ -161,6 +199,7 @@ for(let i = 0; i < newDB.length ; i++){
                                 <p class="review">리뷰 ${newDB[i].review_count}</p>
                             </div>
                         </a>
+                        <button type="button" class="like_btn"></button>
                     `;
     newContents.appendChild(newLi);
 }
@@ -184,32 +223,16 @@ for(let i = 0; i < todayDB.length ; i++){
                                 <p class="review">리뷰 ${todayDB[i].review_count}</p>
                             </div>
                         </a>
+                        <button type="button" class="like_btn"></button>
                     `;
     todayContents.appendChild(todayLi);
 }
 
-function showCategoryItem(categoryType) {
-    const bestContents = document.querySelector('.best_sec > ul.contents');
-    bestContents.innerHTML = "";
-    
-    for(let i = 0; i < bestDB.length ; i++){
-        if (bestDB[i].type != categoryType) {
-            continue;
-        }
+// like_btn 활성화 --------------------------------------------------
 
-        const bestLi = document.createElement('li');
-    
-        bestLi.innerHTML = `<a href="#">
-                                <p class="best_thumb">
-                                    <img src="${bestDB[i].image}" alt="${bestDB[i].image_alt}">
-                                </p>
-                                <div class="product_desc">
-                                    <h3 class="name">${bestDB[i].name}</h3>
-                                    <p class="price">${bestDB[i].price.toLocaleString()}원</p>
-                                    <p class="review">리뷰 ${bestDB[i].review_count}</p>
-                                </div>
-                            </a>
-                        `;
-        bestContents.appendChild(bestLi);
-    } 
-}
+const likeBtn = document.querySelectorAll('.like_btn');
+likeBtn.forEach((o)=>{
+o.addEventListener('click',()=>{
+    o.classList.toggle('active');
+})
+});
