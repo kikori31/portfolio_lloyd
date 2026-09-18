@@ -77,22 +77,24 @@ header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_banne
 main{}
 /* 1행 메인 배너 시작 --------------------------------------------------------- */
 /* swiper(보이는 영역) > swiper-wrapper (움직이는대상) > swiper-slide(개별슬라이드) */
-main  .hero .hero-banner {height:904px;}
+
+main  .hero .hero-banner {} /* 9.18 추가 height:calc(100vw * 904 /1920);   기존값 : height:904px; */ 
 main  .hero .hero-banner > .swiper-wrapper {}
-main  .hero .hero-banner > .swiper-wrapper > .swiper-slide {}
+main  .hero .hero-banner > .swiper-wrapper > .swiper-slide {
+    height:calc(100vw * 850 /1920); 
+    background-size: cover; background-position: center; background-repeat: no-repeat;  }
+
 main  .hero .hero-banner .swiper-wrapper .hero1{
     /* 9.17 swiper-slide값이 적용되어있는걸 개인한테 block 및 bg 속성 값 추가 */
     background-image:url(../images/mainbnr03.jpg);
-    background-size: cover; background-position: center; background-repeat: no-repeat;
 }
 main  .hero .hero-banner .swiper-wrapper .hero2{
     background-image:url(../images/mainbnr02.jpg);
-    background-size: cover; background-position: center; background-repeat: no-repeat;
 }
 main  .hero .hero-banner .swiper-wrapper .swiper-slide * {color:var(--color-light);}
 main  .hero .hero-banner .swiper-wrapper .swiper-slide .right_title {
     position: absolute; top:46%; left:10%; font-size:var(--font-size-maintitle); 
-    font-family: var(font-family-maintitle); font-weight:var(--font-weight-m);
+    font-family: var(--font-family-maintitle); font-weight:var(--font-weight-m);
     /* top:46%; left:15%;  */
     transform:translateX(60px); opacity:0;
     animation: right_ani 2s cubic-bezier(0.16, 1, 0.3, 1) forwards ;
@@ -155,6 +157,12 @@ main .category_menu ul li .desc {text-align: center; font-weight:var(--font-weig
     color:var(--color-light);
 }
 
+/* like_btn */
+.like_active {
+    background-image: url(../images/like_btn_on.svg) !important;
+    background-size: cover !important; 
+}
+
 /* 상품 섹션별 타이틀 공통 디자인 */
 .item_sec_maintitle {font-size: var(--font-size-sectitle); font-weight:var(--font-weight-b); margin-bottom:15px;}
 .item_sec_subtitle {font-size:var(--font-size-subtitle);}
@@ -198,6 +206,31 @@ main .new_sec .contents li a .product_desc {}
 main .new_sec .contents li a .product_desc .new_icon {margin-bottom: 15px;}
 main .new_sec .contents li a .product_desc .new_icon img {}
 
+/* 5행 다이아몬드 섹션 --------------------------------------------------------- */
+main .diamond_wrap{background-color: #4e4e4e; height:calc(100vw * 840 /1920);}
+main .diamond_wrap .dia-banner{}
+main .diamond_wrap .dia-banner .swiper-wrapper{}
+main .diamond_wrap .dia-banner .swiper-wrapper{}
+main .diamond_wrap .dia-banner .swiper-wrapper .lab {}
+main .diamond_wrap .dia-banner .swiper-wrapper .lab .lab_text_g {} 
+main .diamond_wrap .dia-banner .swiper-wrapper .lab .lab_text_g * { 
+    color:var(--color-light);
+}
+main .diamond_wrap .dia-banner .swiper-wrapper .lab .lab_text_g .lab_title{
+    
+}
+main .diamond_wrap .dia-banner .swiper-wrapper .lab .lab_text_g .lab_title .title {
+    font-size:var(--font-size-sectitle); font-weight:var(--font-weight-m); font-family: var(--font-family-maintitle);
+}
+main .diamond_wrap .dia-banner .swiper-wrapper .lab .lab_text_g .lab_title .subtitle {
+    font-size:var(--font-size-lab);
+}
+main .diamond_wrap .dia-banner .swiper-wrapper .lab .lab_text_g .lab_prod_desc {}
+main .diamond_wrap .dia-banner .swiper-wrapper .lab .lab_text_g .lab_prod_desc .name {font-size:var(--font-size-lab);}
+main .diamond_wrap .dia-banner .swiper-wrapper .lab .lab_text_g .lab_prod_desc .summary {font-weight:var(--font-weight-l);}
+main .diamond_wrap .dia-banner .swiper-wrapper .lab .lab_text_g .lab_prod_desc .price {}
+
+
 
 /* 6행 워치스트랩 섹션 ---------------------------------------------------------*/
 main .watch_sec {max-width: var(--width-desk); margin:0 auto; padding:140px 0 0 0;}
@@ -205,7 +238,7 @@ main .watch_sec .item_sec_maintitle {text-align:center;}
 main .watch_sec .item_sec_subtitle  {text-align:center; margin-bottom:var(--spacing-sec-bottom);}
 main .watch_sec .item_wrap  {} /* 시계 전체 감싸는 레이아웃 */
 main .watch_sec .item_wrap .item_contents { /* 시계 3종 레이아웃(ul) */
-    display:flex; 
+    display:flex; gap:30px; 
     justify-content:space-between; /* gap:30px;(기존) ->9.16 space-between으로 바꿈.(피그마랑 달라져서 체크해야함) */ 
     width:var(--width-desk); 
     margin-bottom: var(--spacing-view-btn);} 
@@ -213,7 +246,9 @@ main .watch_sec .item_wrap .item_contents .item_all_list {} /* 각각 li */
 main .watch_sec .item_wrap .item_contents .item_all_list .item_big {} /* big 컨텐츠 (a) */
 main .watch_sec .item_wrap .item_contents .item_all_list .item_big img {margin-bottom:var(--spacing-watch);} /* big 이미지 */
 main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns {} /* small_contetnts (ul) */ 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li {margin-bottom: var(--spacing-watch);}  /* small_contetnts (li) */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li {  /* small_contetnts (li) */
+    margin-bottom: var(--spacing-watch); display: flex; justify-content: space-between;
+} 
 main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small {  /* small 컨텐츠(a) */
     display: flex; gap:25px;} 
 main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_small_thumb {
@@ -225,16 +260,19 @@ main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li
 main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info { /* 상품명~버튼까지  */ 
     display:flex; align-items: center; position: relative;
 } 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .name_review_wrap .item_name {
-    font-size:var(--font-size-prodname); margin-bottom: 10px;
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap .item_name {
+    font-size:var(--font-size-prodname); margin-bottom: 10px; 
 } 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .name_review_wrap .item_price {
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap .item_name span{
+    display:block; line-height: 1.2;
+}
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap .item_price {
     font-size:var(--font-subtitle); font-weight:var(--font-weight-b); margin-bottom:15px;
 } 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .name_review_wrap .item_review {
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap .item_review {
     font-size:var(--font-size-review);
 } 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_info  .like_btn {position: absolute; right:-70px;} 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .like_btn {} 
 
 
 
@@ -284,15 +322,21 @@ main .wedding_sec .wedding-banner >.swiper-wrapper > .swiper-slide {}
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding{ /* (웨딩)전체 감싸는 레이아웃  */
     display: flex; justify-content: center; gap:50px; align-items: center; /* (왼쪽)웨딩 큰 이미지 시작 */
 }
-main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link{position:relative;}
+main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link{}
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_thumb{
-    width:932px; height:604px; border-radius: 20px; overflow: hidden; 
+    position: relative; width:932px; height:604px; border-radius: 20px; overflow: hidden; 
 }
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_thumb img{width:100%; height:100%; object-fit: cover;}
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g{}
-main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g p{}
-main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g p+span{}
-
+main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g > *{position: absolute;}
+main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g .wed_title{
+    font-size:var(--font-size-giftmain); font-family:var(--font-family-maintitle); 
+    font-weight:var(--font-weight-m);  left:10%; bottom:22%; 
+}
+main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g .wed_desc{
+    left:10%; bottom:10%; 
+}
+main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g .wed_desc span{display:block; font-size:var(--font-size-gift); line-height: 1.4;}
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_prod_list{display: flex; flex-flow:column nowrap; gap:22px;}
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_prod_list .prod{}
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_prod_list .prod a{
@@ -331,7 +375,7 @@ main .gift_sec .card_list .card_link .card_content * {
 }
 main .gift_sec .card_list .card_link .card_content .card_title {
     font-size:var(--font-size-giftmain); margin-bottom:var(--spacing-giftmain);
-    font-weight:var(--font-weight-m);
+    font-weight:var(--font-weight-m); font-family: var(--font-family-maintitle);
 }
 main .gift_sec .card_list .card_link .card_content .card_desc{margin-bottom: var(--spacing-giftbtn);} /* 글자 전체 묶음(view more까지) */
 main .gift_sec .card_list .card_link .card_content .card_desc span{
@@ -341,3 +385,4 @@ main .gift_sec .card_list .card_link .card_content .gift_btn {
     font-size:var(--font-size-review); border:1px solid #fff; display: inline; padding:6px 18px;
 }
 
+/* 푸터 */

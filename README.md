@@ -27,3 +27,6 @@ seach_btn과 cart_btn에 2개에만 margin-right:24px를 줘서 문제를 해결
 
 9/17
 * 메인배너에 회색막이 생겼음 ->poup.bg에 문제는 아닌것 같음
+
+9/18
+* font-family:var(--font-family-maintitle); --기호 오류

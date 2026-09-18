@@ -1,6 +1,6 @@
 //index.js(로이드)
 
-//item 메뉴에 올렸을 때 나오는 서브메뉴
+//item 메뉴에 올렸을 때 나오는 서브메뉴 --------------------------------------------------
 
 const itemMenu = document.querySelector('nav .main_menu > li:nth-child(3)');
 const menuOpen = document.querySelector('.menu_open_wrap');
@@ -20,7 +20,7 @@ function hideMenu(){
     menuOpen.style.display = 'none';
     popup_bg.style.display = 'none';
 }
-
+// --------------------------------------------------
 
 // const itemMenu = document.querySelector('nav .main_menu > li:nth-child(3) a');
 // const menuOpen = document.querySelector('.menu_open_wrap');
@@ -41,8 +41,14 @@ function hideMenu(){
 //     popup_bg.style.display = 'none';
 // }
 
+// like_btn 활성화 --------------------------------------------------
 
-//swiper 메인 배너
+const likeBtn = document.querySelector('#like_btn');
+likeBtn.addEventListener('click',()=>{
+    likeBtn.classList.toggle('like_active');
+})
+
+//swiper 메인 배너 --------------------------------------------------
 
 const slide = new Swiper('.hero-banner',{
     direction:'horizontal',
@@ -62,7 +68,7 @@ const slide = new Swiper('.hero-banner',{
     }
 })
 
-//swiper 웨딩 배너
+//swiper 웨딩 배너 --------------------------------------------------
 const weddingSlide = new Swiper('.wedding-banner',{
     direction:'horizontal',
     loot:true,
