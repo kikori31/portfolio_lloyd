@@ -32,4 +32,11 @@ seach_btn과 cart_btn에 2개에만 margin-right:24px를 줘서 문제를 해결
 * font-family:var(--font-family-maintitle); --기호 오류
 * like_btn 활성화 - js 완료
 * best-o / new-o / 시계-o / 오늘 발송-o
-* 메인배너- 타이틀 간격
+* 메인배너- 타이틀 간격 완료
+
+9/19
+* 검색창 제작 ->  완료
+* 귀걸이 탭 누르면 : 이미지 변경 -> 완료
+* 메인배너 - 글자 애니메이션 무한 반복
+* 푸터 
+* 베스트 하트 오류 -> 완료

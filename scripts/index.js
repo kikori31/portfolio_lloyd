@@ -20,27 +20,25 @@ function hideMenu(){
     menuOpen.style.display = 'none';
     popup_bg.style.display = 'none';
 }
-// --------------------------------------------------
+// 검색창 클릭 화면 --------------------------------------------------
 
-// const itemMenu = document.querySelector('nav .main_menu > li:nth-child(3) a');
-// const menuOpen = document.querySelector('.menu_open_wrap');
-// const popup_bg = document.querySelector('.popup_bg');
-// const bestCategory = document.querySelectorAll('.best_category_group > button')
+const searchBtn = document.querySelector('.search_btn');
+const closeBtn = document.querySelector('.close_btn');
+const searchOpenWrap = document.querySelector('.search_open_wrap');
 
-// menuOpen.style.display ='none';
-// popup_bg.style.display ='none';
+searchOpenWrap.style.display ='none';
 
-// itemMenu.addEventListener('mouseover',showMenu);
-// itemMenu.addEventListener('mouseout',hideMenu);
-// function showMenu(){
-//     menuOpen.style.display = 'flex';
-//     popup_bg.style.display = 'block';
-// }
-// function hideMenu(){
-//     menuOpen.style.display = 'none';
-//     popup_bg.style.display = 'none';
-// }
+searchBtn.addEventListener('click',showMenuSearch);
+closeBtn.addEventListener('click',hideMenuSearch); 
 
+function showMenuSearch(){
+    searchOpenWrap.style.display = 'flex';
+    popup_bg.style.display = 'block';
+}
+function hideMenuSearch(){
+    searchOpenWrap.style.display = 'none';
+    popup_bg.style.display = 'none';
+}
 //swiper 메인 배너 --------------------------------------------------
 
 const slide = new Swiper('.hero-banner',{
@@ -58,7 +56,11 @@ const slide = new Swiper('.hero-banner',{
     navigation:{
         nextEl:'.swiper-button-next',
         prevEl:'.swiper-button-prev'
-    }
+    },
+    // scrollbar: {
+    // el: '.swiper-scrollbar scroll',
+    // draggable: true, //마우스로 직접 드래그해서 슬라이드를 이동가능
+    // },
 })
 
 //swiper 웨딩 배너 --------------------------------------------------
@@ -74,7 +76,38 @@ const weddingSlide = new Swiper('.wedding-banner',{
         nextEl:'.swiper-button-next',
         prevEl:'.swiper-button-prev'
     },
-})
+});
+
+//swiper 랩다 텍스트 배너 --------------------------------------------------
+const diaTxtSlide = new Swiper('.dia-textbnr',{
+    effect:'fade',
+    loop:true,
+    slidesPerView:1,
+    allowTouchMove: false
+});
+
+//swiper 랩다 이미지 배너 --------------------------------------------------
+const diaImgSlide = new Swiper('.dia-imgbnr',{
+    direction:'horizontal',
+    loop:true,
+    slidesPerView:'auto',
+    centeredSlides:true,
+    centeredSlidesBounds: false,
+    loopedSlides:3,
+    autoplay:{
+        delay:6000,
+        disableOnInteraction:false,
+    },
+    navigation:{
+        nextEl:'.diamond_wrap .swiper-button-next',
+        prevEl:'.diamond_wrap .swiper-button-prev'
+    },
+    on:{
+        slideChange: function() {
+            diaTxtSlide.slideToLoop(this.realIndex, 800);
+        }
+    }
+});
 
 //swiper 웨딩 배너 --------------------------------------------------
 // const diaSlide = new Swiper('.dia-banner',{
@@ -230,9 +263,16 @@ for(let i = 0; i < todayDB.length ; i++){
 
 // like_btn 활성화 --------------------------------------------------
 
-const likeBtn = document.querySelectorAll('.like_btn');
-likeBtn.forEach((o)=>{
-o.addEventListener('click',()=>{
-    o.classList.toggle('active');
-})
+//const likeBtn = document.querySelectorAll('.like_btn');
+//likeBtn.forEach((o)=>{
+//o.addEventListener('click',()=>{
+//    o.classList.toggle('active');
+//})
+//});
+
+document.addEventListener("click", (e)=>{
+    const btn = e.target.closest(".like_btn");
+    if (btn) {
+        btn.classList.toggle("active");
+    }
 });

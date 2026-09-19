@@ -7,10 +7,18 @@
     --color-head-line:#EFEFEF; /* 헤더 외곽선 라인 색상 */
     --color-category-line:#D6D6D6; /* 베스트 카테고리 외곽선 */
     --color-category-text:#838383; /* 베스트 카테고리 글자  */
+    --color-search-text:#B9B7B7;
+    --color-search-pop:#474747;
+    --color-search-re:#7C7C7C; /* 검색어가 없습니다 */
+    --color-footer-bg : #F6F6F6; /* 푸터 배경 */
+    --color-footer-text : #5A5A5A; /* 푸터 배경 */
+    --color-footer-box : #E5E5E5; /* 임직원 인증 박스  */
+    --color-footer-line :#DEDEDE; /*  푸터 보더 라인 */
 
     /* 크기 */
     --width-desk-full:1920px;
     --width-desk:1550px;
+    --width-search:650px;
 
     /* 간격 */
     --spacing-sec-bottom:50px; /* 섹션별 타이틀과 컨텐츠 간격 */
@@ -29,6 +37,7 @@
     /* 폰트 크기 */
     --font-size-maintitle:2.813rem; /* 메인배너 40px */
     --font-size-sectitle :2.188rem; /* 섹션 타이틀(best,new 등) 35px */
+    --font-size-xl : 1.75rem; /* 푸터 번호 28px */
     --font-size-giftmain:1.625rem; /* 기프트,웨딩 타이틀 사용 26px  */
     --font-size-lab:1.375rem; /* 랩다이아몬드 22px */
     --font-size-L : 1.188rem; /* 19px */
@@ -36,8 +45,8 @@
     --font-size-gift :1.063rem; /* 기프트,웨딩 서브 내용 17px */
     --font-size-prodname :0.938rem; /* 상품명 15px */
     --font-size-catetext :0.938rem; /* 카테고리 글자 15px */
+    --font-size-s:0.875rem; /* 14px */
     --font-size-review:0.844rem; /* 리뷰 13.5px */
-    --font-size-s:0.875rem;
 
     --font-family-maintitle :'STIX Two Math', serif;
 

@@ -97,7 +97,7 @@ const bestDB = [
         price: 399000,
         review_count: 50,
         image: './images/best_thumb01.jpg',
-        image_alt: ''
+        image_alt: '디어 리본 큐빅 10K 반지'
     },
     {
         id: 2,
@@ -106,7 +106,7 @@ const bestDB = [
         price: 259000,
         review_count: 20,
         image: './images/best_thumb02.jpg',
-        image_alt: ''
+        image_alt: '왕관 물고기 10K 반지'
     },
     {
         id: 3,
@@ -115,7 +115,7 @@ const bestDB = [
         price: 199000,
         review_count: 40,
         image: './images/best_thumb03.jpg',
-        image_alt: ''
+        image_alt: '베이직 탄생석 12월 콜렉트링 10K 여성 반지'
     },
     {
         id: 4,
@@ -124,43 +124,43 @@ const bestDB = [
         price: 999000,
         review_count: 29,
         image: './images/best_thumb04.jpg',
-        image_alt: ''
+        image_alt: '튜더로즈가든 핑크 페어컷 14K 반지'
     },
     {
         id: 1,
         type: 'earring',
-        name: '디어 리본 큐빅 10K 귀걸이',
-        price: 399000,
-        review_count: 50,
-        image: './images/best_thumb01.jpg',
-        image_alt: ''
+        name: '드롭 포인트 10K 원터치 링귀걸이',
+        price: 159000,
+        review_count: 20,
+        image: './images/best_earring01.jpg',
+        image_alt: '드롭 포인트 10K 원터치 링귀걸이'
     },
     {
         id: 2,
         type: 'earring',
-        name: '왕관 물고기 10K 귀걸이',
-        price: 259000,
-        review_count: 20,
-        image: './images/best_thumb02.jpg',
-        image_alt: ''
+        name: '풀세팅 0.3CT 다이아 원터치 14K 귀걸이',
+        price: 699000,
+        review_count: 15,
+        image: './images/best_earring02.jpg',
+        image_alt: '풀세팅 0.3CT 다이아 원터치 14K 귀걸이'
     },
     {
         id: 3,
         type: 'earring',
-        name: '베이직 탄생석 12월 콜렉트링 10K 여성 귀걸이',
+        name: '럭키 행운클로버 핑크 스톤 10K 귀걸이',
         price: 199000,
         review_count: 40,
-        image: './images/best_thumb03.jpg',
-        image_alt: ''
+        image: './images/best_earring03.jpg',
+        image_alt: '럭키 행운클로버 핑크 스톤 10K 귀걸이'
     },
     {
         id: 4,
         type: 'earring',
-        name: '튜더로즈가든 핑크 페어컷 14K 귀걸이',
-        price: 999000,
+        name: '다이아 로렛밴드 14K 귀걸이',
+        price: 699000,
         review_count: 29,
-        image: './images/best_thumb04.jpg',
-        image_alt: ''
+        image: './images/best_earring04.jpg',
+        image_alt: '다이아 로렛밴드 14K 귀걸이'
     },
     {
         id: 1,
