@@ -80,33 +80,47 @@ const weddingSlide = new Swiper('.wedding-banner',{
 
 //swiper 랩다 텍스트 배너 --------------------------------------------------
 const diaTxtSlide = new Swiper('.dia-textbnr',{
-    effect:'fade',
     loop:true,
-    slidesPerView:1,
-    allowTouchMove: false
+    speed: 700,
+    allowTouchMove: false, //마우스 드래그로 스와이프 불가
+    effect: 'fade',
+    fadeEffect: { crossFade: true }
 });
 
 //swiper 랩다 이미지 배너 --------------------------------------------------
 const diaImgSlide = new Swiper('.dia-imgbnr',{
-    direction:'horizontal',
     loop:true,
-    slidesPerView:'auto',
-    centeredSlides:true,
-    centeredSlidesBounds: false,
-    loopedSlides:3,
+    speed: 750,
+    effect:'creative',
+    creativeEffect: {
+        limitProgress: 2,
+        prev: {
+            translate: [0, 0, -1], //슬라이드 위치 뒤쪽
+            opacity: 0, //투명도
+            scale: 0.8, //크기 0.8
+        },
+        next: {
+            translate: ['108%', 0, 0], //슬라이드 오른쪽 108% 위치
+            scale: 0.8, //크기 0.8
+            opacity: 0.45, //투명도 0.45
+        },
+    },
     autoplay:{
-        delay:6000,
+        delay:6000, //6초
         disableOnInteraction:false,
     },
+    watchSlidesProgress: true,  //슬라이드 실시간 감지
+    loopedSlides: 2, //앞뒤로 복제할 슬라이드 기본개수
+    loopAdditionalSlides: 2, //화면 밖 여분 복제 슬라이드 개수 (점멸이슈 조치)
     navigation:{
         nextEl:'.diamond_wrap .swiper-button-next',
         prevEl:'.diamond_wrap .swiper-button-prev'
-    },
-    on:{
-        slideChange: function() {
-            diaTxtSlide.slideToLoop(this.realIndex, 800);
-        }
     }
+});
+
+//이미지슬라이드의 index가 변동이 있을때 수행 -> 매칭되는 텍스트슬라이드도 함께 이동
+diaImgSlide.on('realIndexChange', function () {
+    diaTxtSlide.slideTo(this.realIndex % 4);
 });
 
 //swiper 웨딩 배너 --------------------------------------------------

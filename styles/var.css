@@ -33,6 +33,7 @@
     --font-weight-sb : 600;
     --font-weight-m : 500;
     --font-weight-l: 300;
+    --font-weight-th: 100;
 
     /* 폰트 크기 */
     --font-size-maintitle:2.813rem; /* 메인배너 40px */
@@ -49,6 +50,9 @@
     --font-size-review:0.844rem; /* 리뷰 13.5px */
 
     --font-family-maintitle :'STIX Two Math', serif;
+
+    /* 자간 */
+    --letter-spacing-s : -0.02rem; 
 
     /* 버튼 크기 */
     --spcing-best-category : 17px 6px;
