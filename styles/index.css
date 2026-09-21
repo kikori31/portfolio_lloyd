@@ -25,12 +25,12 @@ header .menu_wrap nav .main_menu > li:nth-child(7) > a{ /* 런칭캘린더 메�
     font-weight:var(--font-weight-sb);
 }
 header .menu_wrap nav .main_menu > li > a::after {
-    content:''; display:block; width:100%; height:1.5px; left:0; bottom:-8px;
+    content:''; display:block; width:100%; height:2px; left:0; bottom:-8px; /* heihgt:2px 변경; 소수점 처리: 디스플레이 배율(DPI)에 따라 1.5px 같은 소수점 단위가 화면에 잔여 픽셀로 걸칠 있음. 가급적 1px 또는 2px 정수 단위 사용을 권장 */
     background: #000; position: absolute;
-    transform: scaleX(0);
-    transition:transform 0.4s;
+    transform: scaleX(0); 
+    transition:transform 0.4s; /* opacity: 0; */
 }
-header .menu_wrap nav .main_menu > li > a:hover::after{transform: scaleX(1);}
+header .menu_wrap nav .main_menu > li > a:hover::after{transform: scaleX(1); /* opacity: 1; */ } /* hover했을때 잔상이 남아서 opacity을 줌 */
 
 /* 메뉴 오른쪽 섹션(3개 아이콘) */
 header .menu_wrap .snb {display: flex; gap:24px; }
@@ -121,14 +121,14 @@ main  .hero .hero-banner .swiper-wrapper .hero2{
 
 main  .hero .hero-banner .swiper-wrapper .swiper-slide * {color:var(--color-light);}
 main  .hero .hero-banner .swiper-wrapper .swiper-slide .title_g{width:var(--width-desk); margin: 0 auto;}
-main  .hero .hero-banner .swiper-wrapper .swiper-slide .title_g .right_title {
+main  .hero .hero-banner .swiper-wrapper .swiper-slide .title_g .right_title { /* .swiper-slide-active 추가  */
     position: absolute; top:46%; /* left:10%; */ font-size:var(--font-size-maintitle); 
     font-family: var(--font-family-maintitle); font-weight:var(--font-weight-m);
     transform:translateX(60px); opacity:0;
     animation: right_ani 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-main  .hero .hero-banner .swiper-wrapper .swiper-slide .title_g .right_subtitle {
+main  .hero .hero-banner .swiper-wrapper .swiper-slide .title_g .right_subtitle {  /* .swiper-slide-active 추가  */
     position: absolute; top:54%;/*  left:10%; */ font-size: 1.188rem;
     transform:translateX(60px); opacity:0;
     animation: right_ani 2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.35s;
@@ -241,11 +241,11 @@ main .new_sec .contents li a .product_desc .new_icon img {}
 main .new_sec .contents li .like_btn {position: absolute; top:3%; right:5%;}
 
 /* 5행 다이아몬드 섹션 --------------------------------------------------------- */
-main .diamond_wrap{background-color: #4e4e4e; height:calc(100vw * 730 /1920); overflow: hidden; /*  가로 스크롤 생겨서 hidden 값 줌 */}
-main .diamond_wrap .dia_container {width:var(--width-desk); display: flex; padding: 80px 40px; align-items: center; margin: 0 auto;}
+main .diamond_wrap{background-color: #4e4e4e; height:calc(100vw * 820 /1920); overflow: hidden; /*  가로 스크롤 생겨서 hidden 값 줌 */} 
+main .diamond_wrap .dia_container {width:var(--width-desk); display: flex; padding: 60px 0 50px 0; align-items: center; margin: 0 auto;}
 
 main .diamond_wrap .dia_container .left_container {
-    width: 42%; padding-right: 40px; flex-shrink: 0;
+    width: 40%; padding-right: 40px; flex-shrink: 0;
     z-index: 10; position: relative; 
 } 
 main .diamond_wrap .dia_container .left_container * {color:var(--color-light);}
@@ -253,7 +253,7 @@ main .diamond_wrap .dia_container .left_container .dia-textbnr { position: relat
 main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper{}
 main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .swiper-slide {}
 main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .diatext .dia_text_g {
-    display: flex; flex-flow:column nowrap; gap:100px;
+    display: flex; flex-flow:column nowrap; gap:30px;
 } 
 
 main .diamond_wrap .dia_container .left_container .dia_title{margin-bottom: 90px;}
@@ -266,15 +266,15 @@ main .diamond_wrap .dia_container .left_container .dia_title .subtitle { /* 중�
 }
 main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .diatext .dia_text_g .dia_prod_desc {}
 main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .diatext .dia_text_g .dia_prod_desc .name {
-    font-size:var(--font-size-lab); margin-bottom: 12px; font-weight: var(--font-weight-sb);
+    font-size:var(--font-size-lab); margin-bottom: 18px; font-weight: var(--font-weight-sb);
 }
-main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .diatext .dia_text_g .dia_prod_desc .summary {margin-bottom: 27px;}
+main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .diatext .dia_text_g .dia_prod_desc .summary {margin-bottom: 35px; font-size:var( --font-size-gift);}
 main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .diatext .dia_text_g .dia_prod_desc .summary span { /* 설명 */
     display:block; line-height:1.5; font-weight: var(--font-weight-th);
 } 
-main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .diatext .dia_text_g .dia_prod_desc .price {font-size:var(--font-size-subtitle);}
+main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .diatext .dia_text_g .dia_prod_desc .price {font-size:var(--font-size-subtitle); margin-bottom: 100px;}
 main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .diatext .dia_view {
-    border: 1px solid var(--color-light); display: block; width:132px; height: 36px;
+    border: 0.6px solid var(--color-light); display: block; width:132px; height: 36px; font-weight: var(--font-weight-th);
     display: flex; justify-content: center; align-items: center; font-size:var(--font-size-catetext);
 }
 
@@ -297,14 +297,14 @@ main .diamond_wrap .dia_container .left_container .dia-textbnr .swiper-wrapper .
 
 .nav-buttons .swiper-button-prev, 
 .nav-buttons .swiper-button-next {width:28px; height:28px;}
-.nav-buttons .swiper-button-prev {transform: translateY(300px) translateX(-10px);}
-.nav-buttons .swiper-button-next {transform: translateY(300px) translateX(-550px)}
+.nav-buttons .swiper-button-prev {transform: translateY(280px) translateX(-10px);}
+.nav-buttons .swiper-button-next {transform: translateY(280px) translateX(-560px)}
 
 
 
 main .diamond_wrap .dia_container .right_container {width: 58%; position: relative;}
 main .diamond_wrap .dia_container .right_container .dia-imgbnr {
-    width:58%;
+    width:60%;
     height: 100%;
     overflow: visible; /* 오른쪽 슬라이드가 넘쳐서 보일 수 있도록 필수 */
     }
@@ -421,7 +421,7 @@ main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link{position: r
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_thumb{
     width:932px; height:604px; border-radius: 20px; overflow: hidden; 
 }
-main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_thumb img{width:100%; height:100%; object-fit: cover;}
+main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_thumb img{width:100%; height:100%; object-fit:cover;}
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g{}
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g > *{position: absolute;}
 main .wedding_sec .wedding-banner .swiper-wrapper .wedding .wed_link .wed_title_g .wed_title{

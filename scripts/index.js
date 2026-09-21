@@ -78,7 +78,7 @@ const weddingSlide = new Swiper('.wedding-banner',{
     },
 });
 
-//swiper 랩다 텍스트 배너 --------------------------------------------------
+//swiper 랩다이아 텍스트 배너 --------------------------------------------------
 const diaTxtSlide = new Swiper('.dia-textbnr',{
     loop:true,
     speed: 700,
@@ -87,7 +87,7 @@ const diaTxtSlide = new Swiper('.dia-textbnr',{
     fadeEffect: { crossFade: true }
 });
 
-//swiper 랩다 이미지 배너 --------------------------------------------------
+//swiper 랩다이아 이미지 배너 --------------------------------------------------
 const diaImgSlide = new Swiper('.dia-imgbnr',{
     loop:true,
     speed: 750,
