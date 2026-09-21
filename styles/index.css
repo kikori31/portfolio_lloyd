@@ -95,7 +95,7 @@ header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_banne
 
 /* item메뉴 눌렀을 때 나오는 나오는 배경 */
 .popup_bg {
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0,0,0,0.3); /* 0.25에서 3으로 변경 */
     width:100%; height:100%; left:0; top:0;
     position:absolute; z-index: 900; 
     display: none;
@@ -114,8 +114,10 @@ main  .hero .hero-banner .swiper-wrapper .hero1{
     /* 9.17 swiper-slide값이 적용되어있는걸 개인한테 block 및 bg 속성 값 추가 */
     background-image:url(../images/mainbnr03.jpg);
 }
-
 main  .hero .hero-banner .swiper-wrapper .hero2{
+    background-image:url(../images/mainbnr04.jpg);
+}
+main  .hero .hero-banner .swiper-wrapper .hero3{
     background-image:url(../images/mainbnr02.jpg);
 }
 
@@ -125,12 +127,20 @@ main  .hero .hero-banner .swiper-wrapper .swiper-slide .title_g .right_title { /
     position: absolute; top:46%; /* left:10%; */ font-size:var(--font-size-maintitle); 
     font-family: var(--font-family-maintitle); font-weight:var(--font-weight-m);
     transform:translateX(60px); opacity:0;
-    animation: right_ani 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    /* animation: right_ani 2s cubic-bezier(0.16, 1, 0.3, 1) forwards; */
 }
 
 main  .hero .hero-banner .swiper-wrapper .swiper-slide .title_g .right_subtitle {  /* .swiper-slide-active 추가  */
     position: absolute; top:54%;/*  left:10%; */ font-size: 1.188rem;
     transform:translateX(60px); opacity:0;
+    /* animation: right_ani 2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.35s; */
+}
+
+main .hero .hero-banner .swiper-wrapper .swiper-slide-active .title_g .right_title {
+    animation: right_ani 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+main .hero .hero-banner .swiper-wrapper .swiper-slide-active .title_g .right_subtitle {
     animation: right_ani 2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.35s;
 }
 
@@ -172,16 +182,26 @@ main .category_menu ul li .desc {text-align: center; font-weight:var(--font-weig
 /* VIEW MORE 버튼 디자인 */
 .viewmore_wrap {display:flex; justify-content: center;}
 .viewmore_wrap .viewmore_btn {
+    position: relative;
+    overflow:hidden;
+    z-index: 1;
     font-size:var(--font-size-s);
     color:var(--color-dark);
     border:0.6px solid var(--color-dark);
     padding:10px 28px;
     transition: all 0.35s ease-in-out;
 }
+.viewmore_wrap .viewmore_btn::before{
+content:''; position:absolute;
+left:0; bottom:0; width:100%; height:100%; background-color: var(--color-dark); z-index: -1;
+transform: scaleY(0); transform-origin: bottom; /* 애니메이션 시작 기준점을 바닥으로 고정 */
+transition: transform 0.35s ease-in-out;
+}
 .viewmore_wrap .viewmore_btn:hover{
-    background-color:var(--color-dark);
     color:var(--color-light);
 }
+.viewmore_wrap .viewmore_btn:hover::before { transform: scaleY(1);}
+
 
 /* like_btn */
 .like_btn {

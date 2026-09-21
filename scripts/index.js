@@ -46,7 +46,7 @@ const slide = new Swiper('.hero-banner',{
     loop:true,
     slidesPerView:1,
     autoplay:{
-        delay:6000,
+        delay:5000,
         disableOnInteraction:false,
     },
     pagination: {
