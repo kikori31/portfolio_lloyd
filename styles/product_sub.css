@@ -52,7 +52,11 @@ main .prod_detail .right_container .benefit dd {}
 main .prod_detail .right_container .benefit dd img {}
 
 main .prod_detail .right_container #order_frm {}
-main .prod_detail .right_container #order_frm .cart_order_g{}
-main .prod_detail .right_container #order_frm .cart_order_g {width:288px; height:64px;}
-main .prod_detail .right_container #order_frm .cart_order_g .cart{}
-main .prod_detail .right_container #order_frm .cart_order_g .order_btn{background-color: var(--color-dark);}
+/* 장바구니,구매하기 그룹 */
+main .prod_detail .right_container #order_frm .cart_order_g {display: flex;}
+main .prod_detail .right_container #order_frm .cart_order_g * {
+    display: block; width:288px; height:64px; display: flex; 
+    justify-content: center; align-items: center;
+}
+main .prod_detail .right_container #order_frm .cart_order_g .cart_btn{border:1px solid var(--color-dark);}
+main .prod_detail .right_container #order_frm .cart_order_g .order_btn{background: var(--color-dark); color:var(--color-light);}
