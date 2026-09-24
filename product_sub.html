@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+k<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -138,7 +138,7 @@
     </header>
     <div class="popup_bg"></div> <!-- ITEM 메뉴 눌렀을 때 나오는 배경 -->
     <main>
-        <div class="prod_detail">
+        <div class="prod_wrap">
             <!-- (좌) 작은 상품이미지와 큰 상품이미지 그룹 -->
             <div class="left_container">
                 <div class="small_thumb_g"> <!-- 작은이미지 썸네일 그룹 -->
@@ -156,29 +156,32 @@
                         <p class="link_btn"><img src="./images/link_share.svg" alt="공유하기"></p>
                     </div>
                 </div>
-                <h2 class="prod_name">튜더로즈가든 핑크 페어컷 14K 목걸이</h2>
-                <p class="prod_model">LNF26001D</p>
-                <p class="original_price"><del>929,000원</del></p>
-                <div class="price_coupon">
-                    <div class="price_info">
-                        <p class="percent">20%</p>
-                        <p class="discount_price">799,000원</p>
-                    </div>
-                    <p class="coupon_g"><button class="coupon_btn">쿠폰다운<img src="./images/download_icon.svg" alt="쿠폰다운받기"></button></p>
+                <div class="prod_g">
+                    <h2 class="prod_name">튜더로즈가든 핑크 페어컷 14K 목걸이</h2>
+                    <p class="prod_model">LNF26001D</p>
+                    <p class="original_price"><del>929,000원</del></p>
+                    <div class="price_coupon">
+                        <div class="price_info">
+                            <p class="percent">20%</p>
+                            <p class="discount_price">799,000원</p>
+                        </div>
+                        <p class="coupon_g"><button class="coupon_btn">쿠폰다운<img src="./images/download_icon.svg" alt="쿠폰다운받기"></button></p>
                 </div>
-                <dl class="benefit">
-                    <dt>멤버쉽혜택</dt>
-                    <dd>연 1회 10% 할인 쿠폰 지금(즉시 할인)</dd>
-                    <dd><img src="./images/detail_info_icon.svg" alt="멤버쉽 혜택 자세히보기"></dd>
-                    <dt>적립 포인트</dt>
-                    <dd>43,945 적립</dd>
-                    <dd><img src="./images/detail_info_icon.svg" alt="멤버쉽 혜택 자세히보기"></dd>
-                    <dt>카드혜택/무이자</dt>
-                    <dd>상세보기</dd>
-                    <dd><img src="./images/detail_info_icon.svg" alt="멤버쉽 혜택 자세히보기"></dd>
-                    <dt>배송</dt>
-                    <dd>무료배송</dd>
-                </dl>
+                   <dl class="benefit">
+                        <dt>멤버쉽혜택</dt>
+                        <dd>연 1회 10% 할인 쿠폰 지금(즉시 할인)</dd>
+                        <dd><img src="./images/detail_info_icon.svg" alt="멤버쉽 혜택 자세히보기"></dd>
+                        <dt>적립 포인트</dt>
+                        <dd>43,945 적립</dd>
+                        <dd><img src="./images/detail_info_icon.svg" alt="멤버쉽 혜택 자세히보기"></dd>
+                        <dt>카드혜택/무이자</dt>
+                        <dd>상세보기</dd>
+                        <dd><img src="./images/detail_info_icon.svg" alt="멤버쉽 혜택 자세히보기"></dd>
+                        <dt>배송</dt>
+                        <dd>무료배송</dd>
+                    </dl>
+                </div>
+             
                 <form action="#" method="get" id="order_frm">
                     <select name="gold" id="gold">
                         <option value="gold_option">골드선택</option>
@@ -189,7 +192,7 @@
                         <option value="yellowgold">옐로우골드</option>
                         <option value="whitegold">화이트골드</option>
                     </select>
-                    <p class="total_price"><span>주문금액</span><em>원</em></p>
+                    <p class="total_price"><span>총 상품금액</span><em>원</em></p>
                     <div class="cart_order_g">
                         <a href="#" class="cart_btn">장바구니</a>
                         <a href="#" class="order_btn">구매하기</a>
