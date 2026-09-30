@@ -48,10 +48,10 @@ main .prod_wrap .right_container .price_coupon .coupon_g .coupon_btn {
 }
 main .prod_wrap .right_container .price_coupon .price_info .coupon_g .coupon_btn img {}
 /* benefit : 멤버쉽혜택 ~ 배송 */
-main .prod_wrap .right_container .benefit {padding:10px 0 0 0; display: flex; flex-flow:column nowrap;}
-main .prod_wrap .right_container .benefit dt {font-size:var(--font-size-catetext);}
-main .prod_wrap .right_container .benefit dd {}
-main .prod_wrap .right_container .benefit dd img {}
+main .prod_wrap .right_container .prod_g .benefit {padding:10px 0 0 0; display: flex; flex-flow:column nowrap;}
+main .prod_wrap .right_container .prod_g .benefit dt {font-size:var(--font-size-catetext);}
+main .prod_wrap .right_container .prod_g .benefit dd {}
+main .prod_wrap .right_container .prod_g .benefit dd img {}
 
 main .prod_wrap .right_container #order_frm {}
 /* 장바구니,구매하기 그룹 */
