@@ -3,7 +3,6 @@ body{position: relative; margin: 0 auto; }
 header{background: #fff; position: fixed;  top:0; width:100%; border-bottom:1px solid var(--color-head-line); z-index: 999;}
 header .menu_wrap{ /* 로고~아이콘까지 */
     max-width:var(--width-desk); 
-    min-width:var(--width-desk-v2);
     display:flex; flex-flow:row nowrap;
     justify-content: space-between; align-items:center;
     margin:0 auto;  height:83px; /* z-index:960; */
@@ -53,18 +52,35 @@ header .menu_wrap .search_open_wrap .search_container {
 }
 header .menu_wrap .search_open_wrap .search_container .user_search_g{position:relative;}
 header .menu_wrap .search_open_wrap .search_container .user_search_g #user_search{
-    width:var(--width-search); border-bottom: 0.6px solid var(--color-dark); padding:10px 0;
+    width:var(--width-search); border-bottom: 0.6px solid var(--color-dark); 
+    padding:10px 0;
 }
-header .menu_wrap .search_open_wrap .search_container .user_search_g #user_search::placeholder{color:var(--color-search-text); font-size:var(--font-size-gift);}
+header .menu_wrap .search_open_wrap .search_container .user_search_g #user_search::placeholder{
+    color:var(--color-search-text); font-size:var(--font-size-gift);
+}
 header .menu_wrap .search_open_wrap .search_container .user_search_g img{position: absolute; right:0;}
-header .menu_wrap .search_open_wrap .search_container .popular_search_wrap{width:var(--width-search); display:flex;  padding:40px 0 60px 0; justify-content: space-between;}
+header .menu_wrap .search_open_wrap .search_container .popular_search_wrap{
+    width:var(--width-search); display:flex;
+    padding:40px 0 60px 0; justify-content: space-between;
+}
 header .menu_wrap .search_open_wrap .search_container .popular_search_wrap li {}
 header .menu_wrap .search_open_wrap .search_container .popular_search_wrap li a {
-    color:var(--color-search-pop); border: 0.7px solid var(--color-category-line); border-radius: 20px; padding:6px 14px; font-size:var(--font-size-s);
+    color:var(--color-search-pop);
+    border: 0.7px solid var(--color-category-line);
+    border-radius: 20px; padding:6px 14px; font-size:var(--font-size-s);
 }
-header .menu_wrap .search_open_wrap .search_container .recent_secarch_g {width:var(--width-search);display: flex; flex-flow:column nowrap; justify-content: flex-start; }
-header .menu_wrap .search_open_wrap .search_container .recent_secarch_g .recent_title {font-weight: var(--font-weight-sb); font-size: var(--font-size-gift); margin-bottom: 30px;}
-header .menu_wrap .search_open_wrap .search_container .recent_secarch_g .recent_desc {font-size: var(--font-size-s); color:var(--color-search-re); text-align: center;}
+header .menu_wrap .search_open_wrap .search_container .recent_secarch_g {
+    width:var(--width-search);display: flex; flex-flow:column nowrap; 
+    justify-content: flex-start; 
+}
+header .menu_wrap .search_open_wrap .search_container .recent_secarch_g .recent_title {
+    font-weight: var(--font-weight-sb); font-size: var(--font-size-gift); 
+    margin-bottom: 30px;
+}
+header .menu_wrap .search_open_wrap .search_container .recent_secarch_g .recent_desc {
+    font-size: var(--font-size-s); color:var(--color-search-re); 
+    text-align: center;
+}
 header .menu_wrap .search_open_wrap .search_container .close_btn{position:absolute; right:0%; top:7%;}
 header .menu_wrap .search_open_wrap .search_container .close_btn img{}
 
@@ -78,7 +94,6 @@ header .menu_wrap nav .main_menu li .menu_open_wrap { /* item 마우스오버 �
 header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner {
     width:var(--width-desk); margin:0 auto; padding-top:40px;
     display:flex;  justify-content: space-between;
-    
 } 
 header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_list {
     display:flex; gap:110px;
@@ -87,9 +102,8 @@ header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_list 
 header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_list .middle_menu > a {font-weight:var(--font-weight-sb);}
 header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_list .middle_menu:nth-child(2) > a {color:var(--color-primary);}
 header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu { margin-top:28px;} 
-header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li { margin-top:16px; font-size:0.875rem;} 
-header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li > a {} 
-
+header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li { margin-top:16px; } 
+header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_list .middle_menu .sub_menu > li > a {font-weight: 400; font-size:0.875rem;} 
 header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_banner {}
 header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_banner a {}
 header .menu_wrap nav .main_menu li .menu_open_wrap .menu_open_inner .menu_banner a img {}
