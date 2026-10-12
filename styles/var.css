@@ -34,6 +34,7 @@
     --spacing-view-btn:65px; /* view more 버튼 간격 */
     --spacing-watch:15px; /* */
     --spacing-sec-all : 140px;
+    --spacing-sec-t:100px;
     --spacing-giftmain:20px;
     --spacing-giftbtn:30px;
 
@@ -48,11 +49,12 @@
     --font-size-maintitle:2.813rem; /* 메인배너 40px */
     --font-size-sectitle :2.188rem; /* 섹션 타이틀(best,new 등) 35px */
     --font-size-2xl:1.875rem; /* 태블릿(섹션 제목) 30px */
-    --font-size-xl : 1.75rem; /* 푸터 번호 28px */
+    --font-size-xl : 1.75rem; /* 푸터 번호,lab다이아 태블릿(대제목) 28px*/
     --font-size-giftmain:1.625rem; /* 기프트,웨딩 타이틀 사용 26px  */
-    --font-size-lab:1.375rem; /* 랩다이아몬드,상품명(상품서브페이지) 22px */
+    --font-size-lab:1.375rem; /* 랩다이아,상품명(상품서브페이지) 22px */
+    --font-size-labT:1.25rem; /* 랩다이아 태블릿(중제목) 20px */
     --font-size-L : 1.188rem; /* 19px */
-    --font-size-subtitle :1.125rem; /* 18px */
+    --font-size-subtitle :1.125rem; /* 18px, 랩다이아 설명 */
     --font-size-gift :1.063rem; /* 기프트,웨딩 서브 내용 17px */
     --font-size-prodname :0.938rem; /* 상품명 15px */
     --font-size-catetext :0.938rem; /*  15px 카테고리 글자,상품상세 서브제목(혜택,배송),태블릿메뉴 */
