@@ -7,9 +7,8 @@
 @media screen and (max-width:760px){}
     
 
-/* --------------------------------------- 1120 태블릿 */
+
 @media screen and (max-width:1024px){
-    body{position: relative; margin: 0 auto; }
     header{background: #fff; position: fixed;  top:0; width:100%; border-bottom:1px solid var(--color-head-line); z-index: 999; padding:0 60px;}
     header .menu_wrap{ /* 로고~아이콘까지 */
         max-width:var(--width-tablet-v1);
@@ -316,3 +315,18 @@
         }
 
 } /* e:1024 종료 */
+
+@media screen and (max-width:1580px){
+    header{background: #fff; position: fixed;  top:0; width:100%; border-bottom:1px solid var(--color-head-line); z-index: 999; padding:0 20px;}
+    header .menu_wrap{ /* 로고~아이콘까지 */
+        max-width:1040px; 
+        display:flex; flex-flow:row nowrap;
+        justify-content: space-between; align-items:center;
+        margin:0 auto;  height:83px; z-index:960;
+    }
+    header .menu_wrap .logo{}
+    header .menu_wrap .logo a {}
+    header .menu_wrap .logo a img {}
+
+    
+}
