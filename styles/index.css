@@ -357,47 +357,101 @@ main .watch_sec {
     padding:var(--spacing-sec-all) 0 0 0;
 }
 main .watch_sec .item_sec_maintitle {text-align:center;}
-main .watch_sec .item_sec_subtitle  {text-align:center; margin-bottom:var(--spacing-sec-bottom);}
-main .watch_sec .item_wrap  {} /* 시계 전체 감싸는 레이아웃 */
-main .watch_sec .item_wrap .item_contents { /* 시계 3종 레이아웃(ul) */
+main .watch_sec .item_sec_subtitle  {
+    text-align:center; 
+    margin-bottom:var(--spacing-sec-bottom);
+}
+/* 시계 전체 감싸는 레이아웃 */
+main .watch_sec .item_wrap  {
+
+} 
+/* 시계 3종 레이아웃(ul) */
+main .watch_sec .item_wrap .item_contents { 
+    max-width:var(--width-desk);
+    /* gap 값을 반드시 넣어야 함 */
     display:flex; gap:30px;
-     /* gap:30px;(기존) ->9.16 space-between으로 바꿈.(피그마랑 달라져서 체크해야함) */ 
-    justify-content:space-between;
-    /* max-width:var(--width-desk);  */
-    margin-bottom: var(--spacing-view-btn);} 
-main .watch_sec .item_wrap .item_contents .item_all_list {} /* 각각 li */
-main .watch_sec .item_wrap .item_contents .item_all_list .item_big {max-width:496px; max-height:541px;} /* big 컨텐츠 (a) */
-main .watch_sec .item_wrap .item_contents .item_all_list .item_big img { /* big 이미지 */
+    justify-content: space-between;
+    margin-bottom: var(--spacing-view-btn);
+}
+/* 각각 li */
+main .watch_sec .item_wrap .item_contents .item_all_list {
+    flex:1;
+    min-width:0;
+}
+/* big 컨텐츠 (a) */ 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_big {
+    display: block;
+    width: 100%;
+    max-width:496px;
+    aspect-ratio: 496 / 541;
+    overflow: hidden;
     margin-bottom:var(--spacing-watch);
 } 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns {} /* small_contetnts (ul) */ 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li {  /* small_contetnts (li) */
-    margin-bottom: var(--spacing-watch); display: flex; justify-content: space-between; align-items: center;
-} 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small {  /* small 컨텐츠(a) */
-    display: flex; gap:25px;} 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_small_thumb {
-    width:120px; height:120px;
-}  
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_small_thumb img { /* small 이미지 */
-    width:100%;height:100%; object-fit:cover;
-} 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info { /* 상품명~버튼까지  */ 
-    display:flex; align-items: center; position: relative;
-} 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap .item_name {
-    font-size:var(--font-size-prodname); margin-bottom: 10px; 
-} 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap .item_name span{
-    display:block; line-height: 1.2;
+main .watch_sec .item_wrap .item_contents .item_all_list .item_big img { /* big 이미지 */
+    width:100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
+/* small_contetnts (ul) */ 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns {
+
+}  
+/* small_contetnts (li) */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li {
+    margin-bottom: var(--spacing-watch);
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width:100%;
+    max-width: 496px;
+}
+/* small 컨텐츠(a) */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small {
+    display: flex; 
+    gap:25px;
+    flex:1;  /* 찜하기 버튼을 제외한 공간을 채움 */
+    min-width:0; /* 자식이 줄어들 수 있도록 강제 축소 허용 (필수) */
+} 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_small_thumb {
+    width:120px; 
+    height:120px;
+    flex-shrink:0;
+} 
+/* small 이미지 */
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_small_thumb img { 
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+}
+ /* 상품명~버튼까지  */ 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info {
+    display:flex; 
+    align-items: center; 
+    position: relative;
+    flex:1;
+    min-width:0;
+}
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap{
+    width:100%;
+    min-width:0;
+}
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap .item_name {
+    font-size:var(--font-size-prodname);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+} 
 main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap .item_price {
     font-size:var(--font-subtitle); font-weight:var(--font-weight-b); margin-bottom:15px;
 } 
 main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .item_small .item_info .prod_wrap .item_review {
     font-size:var(--font-size-review);
 } 
-main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .like_btn {} 
+main .watch_sec .item_wrap .item_contents .item_all_list .item_small_contetns li .like_btn {
+    flex-shrink:0;
+} 
 
 
 /* 7행 오늘출발 섹션 --------------------------------------------------------- */
